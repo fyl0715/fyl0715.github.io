@@ -199,54 +199,6 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
 .location { margin-bottom: .65rem; }
 .profile-links { gap: 0 .65rem; }
 .profile-links a { min-height: 44px; overflow-wrap: anywhere; }
-/* Keep the card hierarchy consistent, with routing and depth motifs for each paper. */
-.featured-works { grid-column: 1 / -1; }
-.featured-works h2 { margin: 0 0 .7rem; font-size: 1.05rem; letter-spacing: 0; }
-.featured-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
-.featured-card {
-  --card-ink: #174e69;
-  --card-surface: #ebf4f8;
-  --card-border: #cbdee8;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 1rem;
-  min-width: 0;
-  padding: 1rem 1.2rem;
-  border: 1px solid var(--card-border);
-  border-top: 3px solid var(--card-ink);
-  border-radius: .7rem;
-  background: var(--card-surface);
-  color: var(--card-ink);
-  text-decoration: none;
-}
-.featured-card--depth {
-  --card-ink: #4d4779;
-  --card-surface: #f2f0f8;
-  --card-border: #dad4ea;
-}
-.featured-card:hover { box-shadow: 0 3px 12px #18243519; text-decoration: none; }
-.featured-card:hover strong, .featured-card:focus-visible strong { text-decoration: underline; text-underline-offset: .15em; }
-.featured-card-copy { display: grid; gap: .15rem; min-width: 0; }
-.featured-card strong { font-size: 1.35rem; line-height: 1.2; }
-.featured-card .featured-topic { color: var(--ink); font-size: .91rem; line-height: 1.4; }
-.featured-venue { margin-top: .25rem; color: var(--muted); font-size: .8rem; line-height: 1.35; }
-.feature-art { width: 96px; height: 56px; color: var(--card-ink); }
-.expert-routing { display: grid; grid-template-columns: 9px 1fr 15px; align-items: stretch; }
-.expert-tokens, .expert-nodes { display: grid; grid-template-rows: repeat(3, 1fr); align-items: center; }
-.expert-tokens i { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
-.expert-nodes i { width: 15px; height: 13px; border: 1.5px solid currentColor; border-radius: 3px; background: #ffffff9c; }
-.expert-paths { position: relative; }
-.expert-paths i { position: absolute; inset-inline-start: 0; height: 1px; background: currentColor; opacity: .65; transform-origin: left; }
-.expert-paths i:nth-child(1) { top: 17%; width: 100%; }
-.expert-paths i:nth-child(2) { top: 17%; width: 103%; transform: rotate(14deg); }
-.expert-paths i:nth-child(3) { top: 50%; width: 100%; }
-.expert-paths i:nth-child(4) { top: 83%; width: 100%; }
-.depth-routing { display: grid; gap: 4px; }
-.depth-layer { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; }
-.depth-layer i { border: 1px solid currentColor; border-radius: 2px; }
-.dense-layer i, .sparse-layer i:nth-child(2), .sparse-layer i:nth-child(4) { background: currentColor; }
-.sparse-layer i:nth-child(odd) { opacity: .4; border-style: dashed; }
 .background-row { gap: clamp(2rem, 5vw, 4rem); }
 .education h2, .research h2, .section-heading h2 { font-size: clamp(1.35rem, 2.1vw, 1.65rem); }
 .news-list { list-style: none; padding: 0; margin-top: .9rem; }
@@ -283,11 +235,6 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
   .about p { font-size: 1rem; line-height: 1.6; margin-bottom: .7rem; }
   .about .about-focus { font-size: 1.04rem; line-height: 1.58; }
   .about .about-detail { font-size: .875rem; }
-  .featured-links { gap: .55rem; }
-  .featured-card { grid-template-columns: minmax(0, 1fr); grid-template-rows: 1fr auto; gap: .55rem; padding: .65rem .7rem; align-items: start; }
-  .featured-card strong { font-size: 1.15rem; }
-  .featured-card .featured-topic { font-size: .84rem; }
-  .feature-art { width: 76px; height: 40px; }
   .publication { padding-block: 1.4rem; }
   .news-list li { grid-template-columns: 4.25rem minmax(0, 1fr); gap: .55rem; font-size: .95rem; }
 }
@@ -322,7 +269,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <section class="about" id="about" aria-labelledby="about-heading">
         <h1 id="about-heading">Yilong Fan</h1>
         <p class="about-affiliation"><span data-lang="en">I am a Ph.D. student in Computer Science and Technology at Tianjin University. My advisor is <a href="https://itlab.tju.edu.cn/info/1037/1023.htm">Prof. Xuewei Li</a>.</span><span data-lang="zh">我目前在天津大学攻读计算机科学与技术博士学位。我的导师是<a href="https://itlab.tju.edu.cn/info/1037/1023.htm">李雪威教授</a>。</span></p>
-<p class="about-focus"><span data-lang="en">I study conditional computation in large models under limited compute budgets. My work covers expert routing (MaxScore), sparse depth routing and scaling laws (X-MoD), and efficient multimodal inference.</span><span data-lang="zh">我主要研究有限算力下的大模型条件计算，关注专家路由（MaxScore）、稀疏深度路由及其缩放规律（X-MoD），以及高效多模态推理。</span></p>
+<p class="about-focus"><span data-lang="en">My research spans efficient large models, reasoning and learning, and computer vision. I study how conditional computation can make large models more efficient to train and run. I also work on model reasoning, multimodal visual understanding, and image analysis.</span><span data-lang="zh">我的研究方向包括高效大模型、推理与学习，以及计算机视觉。我关注如何通过条件计算提高大模型的训练和推理效率，也研究模型推理、多模态视觉理解与图像分析。</span></p>
 <p class="about-detail"><span data-lang="en">I also serve as a reviewer for conferences including ICASSP, CVPR, and ICLR.</span><span data-lang="zh">我也担任 ICASSP、CVPR 和 ICLR 等学术会议的审稿人。</span></p>
       </section>
       <aside class="profile" aria-label="Researcher profile">
@@ -338,36 +285,6 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
           </div>
         </div>
       </aside>
-      <section class="featured-works" aria-labelledby="featured-works-heading">
-        <h2 id="featured-works-heading"><span data-lang="en">Selected works</span><span data-lang="zh">代表作</span></h2>
-        <div class="featured-links">
-          <a class="featured-card featured-card--experts" href="#maxscore2025">
-            <div class="featured-card-copy">
-              <strong>MaxScore</strong>
-              <span class="featured-topic" data-lang="en">MoE expert routing</span><span class="featured-topic" data-lang="zh">MoE 专家路由</span>
-              <span class="featured-venue">Findings of ACL 2025</span>
-            </div>
-            <div class="feature-art expert-routing" aria-hidden="true">
-              <div class="expert-tokens"><i></i><i></i><i></i></div>
-              <div class="expert-paths"><i></i><i></i><i></i><i></i></div>
-              <div class="expert-nodes"><i></i><i></i><i></i></div>
-            </div>
-          </a>
-          <a class="featured-card featured-card--depth" href="#xmod2026">
-            <div class="featured-card-copy">
-              <strong>X-MoD</strong>
-              <span class="featured-topic" data-lang="en">Sparse depth routing</span><span class="featured-topic" data-lang="zh">稀疏深度路由</span>
-              <span class="featured-venue">arXiv · 2026</span>
-            </div>
-            <div class="feature-art depth-routing" aria-hidden="true">
-              <div class="depth-layer dense-layer"><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="depth-layer sparse-layer"><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="depth-layer sparse-layer"><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="depth-layer dense-layer"><i></i><i></i><i></i><i></i><i></i></div>
-            </div>
-          </a>
-        </div>
-      </section>
     </div>
     <div class="background-row">
       <section class="education" id="education" aria-labelledby="education-heading">

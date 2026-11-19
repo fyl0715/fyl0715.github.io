@@ -100,8 +100,8 @@
   "educationSource": "Provided by the profile owner on 2026-11-19.",
   "aboutDetails": [
     {
-      "zh": "我主要研究有限算力下的大模型条件计算，关注专家路由（MaxScore）、稀疏深度路由及其缩放规律（X-MoD），以及高效多模态推理。",
-      "en": "I study conditional computation in large models under limited compute budgets. My work covers expert routing (MaxScore), sparse depth routing and scaling laws (X-MoD), and efficient multimodal inference."
+      "zh": "我的研究方向包括高效大模型、推理与学习，以及计算机视觉。我关注如何通过条件计算提高大模型的训练和推理效率，也研究模型推理、多模态视觉理解与图像分析。",
+      "en": "My research spans efficient large models, reasoning and learning, and computer vision. I study how conditional computation can make large models more efficient to train and run. I also work on model reasoning, multimodal visual understanding, and image analysis."
     },
     {
       "zh": "我也担任 ICASSP、CVPR 和 ICLR 等学术会议的审稿人。",
