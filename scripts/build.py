@@ -116,8 +116,11 @@ def main():
         )
     else:
         first_paragraph = bilingual(**about)
-    about_paragraphs = [first_paragraph, *(bilingual(**p) for p in profile.get("aboutDetails", []))]
-    about_blocks = "\n".join(f"<p>{paragraph}</p>" for paragraph in about_paragraphs)
+    about_paragraphs = [f'<p class="about-affiliation">{first_paragraph}</p>']
+    for index, paragraph in enumerate(profile.get("aboutDetails", [])):
+        detail_class = "about-focus" if index == 0 else "about-detail"
+        about_paragraphs.append(f'<p class="{detail_class}">{bilingual(**paragraph)}</p>')
+    about_blocks = "\n".join(about_paragraphs)
     education = "".join(
         '<li><div class="education-heading"><h3>' + bilingual(**item["institution"])
         + '</h3><p class="education-period">' + bilingual(**item["period"])
