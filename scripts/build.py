@@ -152,6 +152,7 @@ def main():
     schema = {"@context": "https://schema.org", "@type": "Person", "name": profile["name"], "url": profile["siteUrl"], "affiliation": {"@type": "CollegeOrUniversity", "name": profile["affiliation"]["en"]}, "sameAs": [profile["scholar"], profile["github"]], "knowsAbout": [r["en"] for r in profile["research"]]}
     fields = {
         "NAME": e(profile["name"]), "DESCRIPTION": e(profile["name"] + " at " + profile["affiliation"]["en"] + ". Research in deep learning, computer vision and large language models. Publications and research interests."),
+        "EMAIL": e(profile["email"]),
         "AFFILIATION": bilingual(**profile["affiliation"]), "LOCATION": bilingual(**profile["location"]),
         "SCHOLAR": e(profile["scholar"]), "GITHUB": e(profile["github"]), "SITE_URL": e(profile["siteUrl"]),
         "CITATIONS": profile["metrics"]["citations"], "HINDEX": profile["metrics"]["hIndex"], "I10INDEX": profile["metrics"]["i10Index"],
