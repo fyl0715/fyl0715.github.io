@@ -54,7 +54,7 @@
         event.preventDefault();
         const figure = link.querySelector('img');
         const enlarged = document.getElementById('figure-dialog-image');
-        enlarged.src = figure.src;
+        enlarged.src = link.href;
         enlarged.alt = figure.alt;
         document.getElementById('figure-dialog-title').textContent = link.dataset.figureTitle;
         document.getElementById('figure-dialog-caption').textContent = language() === 'en' ? link.dataset.captionEn : link.dataset.captionZh;

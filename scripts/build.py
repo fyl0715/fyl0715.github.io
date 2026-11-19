@@ -47,7 +47,7 @@ def figure_html(p):
         caption = "<figcaption>" + bilingual("Redrawn method diagram", "重绘方法图") + "</figcaption>"
     return f'''<figure class="pub-figure">
       <a class="figure-link" href="{e(figure['path'])}" target="_blank" rel="noopener noreferrer" data-figure-title="{e(p['title'])}" data-caption-en="{e(figure['caption']['en'])}" data-caption-zh="{e(figure['caption']['zh'])}">
-        <img src="{e(figure['path'])}" width="{figure['width']}" height="{figure['height']}" loading="lazy" decoding="async" alt="{e(figure['alt']['en'])}" data-alt-en="{e(figure['alt']['en'])}" data-alt-zh="{e(figure['alt']['zh'])}">
+        <img src="{e(figure.get('thumbnail', figure['path']))}" width="{figure['width']}" height="{figure['height']}" loading="lazy" decoding="async" alt="{e(figure['alt']['en'])}" data-alt-en="{e(figure['alt']['en'])}" data-alt-zh="{e(figure['alt']['zh'])}">
       </a>
       {caption}
     </figure>'''
@@ -137,7 +137,10 @@ def main():
         year, _, month = when.partition("-")
         date_label = f"{month}/{year}" if month else year
         count = len(papers)
-        titles = ", ".join(e(paper.get("short_title") or paper["title"]) for paper in papers)
+        titles = ", ".join(
+            f'<a href="#{e(paper["id"])}">{e(paper.get("short_title") or paper["title"])}</a>'
+            for paper in papers
+        )
         subject = "paper was" if count == 1 else "papers were"
         news_items.append(
             f'<li><time datetime="{e(when)}">{e(date_label)}</time> <span aria-hidden="true">🎉</span> '
@@ -172,13 +175,15 @@ def main():
     for name in ("index.html", "publications.bib", ".nojekyll"):
         shutil.copy2(ROOT / name, dist / name)
     shutil.copy2(ROOT / "assets/portrait.jpg", dist / "assets/portrait.jpg")
-    for p in publications:
-        if not p.get("image"):
-            continue
-        asset = Path(p["image"]["path"])
-        assert not asset.is_absolute() and ".." not in asset.parts and asset.parts[:2] == ("assets", "papers"), "Invalid figure path"
-        (dist / asset.parent).mkdir(parents=True, exist_ok=True)
-        shutil.copy2(ROOT / asset, dist / asset)
+    for paper in publications:
+        figure = paper.get("image", {})
+        for key in ("path", "thumbnail"):
+            if key not in figure:
+                continue
+            asset = Path(figure[key])
+            assert not asset.is_absolute() and ".." not in asset.parts and asset.parts[:2] == ("assets", "papers"), "Invalid figure path"
+            (dist / asset.parent).mkdir(parents=True, exist_ok=True)
+            shutil.copy2(ROOT / asset, dist / asset)
     print(f"Built {len(publications)} publications into {dist}")
 
 

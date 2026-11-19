@@ -181,7 +181,7 @@
   },
   {
     "id": "bdcl2024",
-    "asset": "assets/papers/bdcl2024-method.png",
+    "asset": "assets/papers/bdcl2024-method.webp",
     "source_url": "https://doi.org/10.1109/ICASSP48485.2024.10447586",
     "processing": "English redraw of the author-provided Chinese BDCL method diagram."
   }

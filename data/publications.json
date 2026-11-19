@@ -39,7 +39,8 @@
       "caption": {
         "en": "Figure 2. ReAccess constructs visual memory during prefill and retrieves evidence during reasoning.",
         "zh": "原论文图 2。ReAccess 在预填充阶段构建视觉记忆，并在推理时检索相关证据。"
-      }
+      },
+      "thumbnail": "assets/papers/reaccess2026-thumb.webp"
     },
     "summary": {
       "en": "Builds a compact visual memory in a single image pass and retrieves question-relevant evidence during inference to support fine-grained visual reasoning.",
@@ -147,7 +148,8 @@
         "zh": "MoD 与 X-MoD 的结构和路由机制。"
       },
       "width": 1400,
-      "height": 532
+      "height": 532,
+      "thumbnail": "assets/papers/xmod2026-thumb.webp"
     },
     "summary": {
       "en": "Introduces a sparse-depth architecture that decouples token sparsity from the spacing of dense layers, and derives scaling laws for choosing routing configurations under a compute budget.",
@@ -199,7 +201,8 @@
         "zh": "相同 token 预算及实际 token 用量下的准确率对比。"
       },
       "width": 1400,
-      "height": 658
+      "height": 658,
+      "thumbnail": "assets/papers/coupling2026-thumb.webp"
     },
     "summary": {
       "en": "Shows how explicit reasoning can crowd out final answers when both share a fixed token budget, and evaluates a strategy that budgets them separately.",
@@ -410,7 +413,8 @@
         "zh": "论文原图，图3 · 语义提取与形变融合"
       },
       "width": 2400,
-      "height": 712
+      "height": 712,
+      "thumbnail": "assets/papers/ultrasound2025-thumb.webp"
     },
     "summary": {
       "en": "Registers atlas and target ultrasound images in a learned semantic feature space and fuses the aligned labels to segment thyroid nodules.",
@@ -459,7 +463,8 @@
       "caption": {
         "en": "Figure 1. Mamba-DFAN architecture with dual-band frequency modeling and cross-modal feature fusion.",
         "zh": "原论文图 1。Mamba-DFAN 整体架构，展示双频段建模与跨模态特征融合。"
-      }
+      },
+      "thumbnail": "assets/papers/mambadfan2025-thumb.webp"
     },
     "summary": {
       "en": "Uses Mamba to model low-frequency structure and high-frequency details, then adaptively fuses RGB with depth or thermal cues for salient object detection.",
@@ -510,7 +515,8 @@
       "caption": {
         "en": "Figure 3. PtReCl architecture showing pseudo-mask restoration, prototype acquisition, pixel reclassification, and mask refinement.",
         "zh": "原论文图 3。PtReCl 架构，包含伪掩码恢复、原型获取、像素重分类和掩码再细化。"
-      }
+      },
+      "thumbnail": "assets/papers/pixel2024-thumb.webp"
     },
     "summary": {
       "en": "Learns foreground and background prototypes to reclassify pixels in noisy pseudo-masks, improving supervision for weakly supervised semantic segmentation.",
@@ -551,7 +557,7 @@
       "类别不平衡"
     ],
     "image": {
-      "path": "assets/papers/bdcl2024-method.png",
+      "path": "assets/papers/bdcl2024-method.webp",
       "kind": "adapted",
       "source": "https://doi.org/10.1109/ICASSP48485.2024.10447586",
       "width": 1774,
@@ -563,7 +569,8 @@
       "caption": {
         "en": "BDCL training framework, redrawn in English from the author-provided Chinese diagram.",
         "zh": "BDCL 训练框架，根据作者提供的中文图重绘为英文版。"
-      }
+      },
+      "thumbnail": "assets/papers/bdcl2024-method-thumb.webp"
     },
     "summary": {
       "en": "Combines dynamic temperature learning with hard-example prototypes to learn more balanced and discriminative representations from class-imbalanced medical images.",
