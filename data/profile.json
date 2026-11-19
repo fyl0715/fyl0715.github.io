@@ -1,0 +1,116 @@
+{
+  "name": "Yilong Fan",
+  "affiliation": {
+    "en": "Tianjin University",
+    "zh": "天津大学"
+  },
+  "location": {
+    "en": "Tianjin, China",
+    "zh": "中国 · 天津"
+  },
+  "scholar": "https://scholar.google.com/citations?user=1bKyJZQAAAAJ",
+  "github": "https://github.com/fyl0715",
+  "siteUrl": "https://fyl0715.github.io/",
+  "updated": "2026-11-19",
+  "metrics": {
+    "citations": 25,
+    "hIndex": 3,
+    "i10Index": 0
+  },
+  "about": {
+    "en": "I am a Ph.D. student in Computer Science and Technology at Tianjin University.",
+    "zh": "我目前在天津大学攻读计算机科学与技术博士学位。"
+  },
+  "research": [
+    {
+      "en": "Efficient large models",
+      "zh": "高效大模型",
+      "descriptionEn": "Mixture-of-experts, sparse-depth routing, and scaling laws.",
+      "descriptionZh": "混合专家、稀疏深度路由与缩放定律。"
+    },
+    {
+      "en": "Reasoning & learning",
+      "zh": "推理与学习",
+      "descriptionEn": "Reasoning budgets and reinforcement learning with verifiable rewards.",
+      "descriptionZh": "推理预算分配与可验证奖励强化学习。"
+    },
+    {
+      "en": "Computer vision",
+      "zh": "计算机视觉",
+      "descriptionEn": "Semantic segmentation, medical imaging, and multimodal salient object detection.",
+      "descriptionZh": "语义分割、医学图像分析与多模态显著性目标检测。"
+    }
+  ],
+  "education": [
+    {
+      "period": {
+        "en": "2024–present",
+        "zh": "2024–至今"
+      },
+      "institution": {
+        "en": "Tianjin University",
+        "zh": "天津大学"
+      },
+      "degree": {
+        "en": "Doctoral studies",
+        "zh": "博士在读"
+      },
+      "major": {
+        "en": "Computer Science and Technology",
+        "zh": "计算机科学与技术"
+      }
+    },
+    {
+      "period": {
+        "en": "2022–2024",
+        "zh": "2022–2024"
+      },
+      "institution": {
+        "en": "Tianjin University",
+        "zh": "天津大学"
+      },
+      "degree": {
+        "en": "Master’s degree",
+        "zh": "硕士"
+      },
+      "major": {
+        "en": "Computer Science and Technology",
+        "zh": "计算机科学与技术"
+      }
+    },
+    {
+      "period": {
+        "en": "2018–2022",
+        "zh": "2018–2022"
+      },
+      "institution": {
+        "en": "Tianjin University",
+        "zh": "天津大学"
+      },
+      "degree": {
+        "en": "Bachelor’s degree",
+        "zh": "本科"
+      },
+      "major": {
+        "en": "Computer Science and Technology",
+        "zh": "计算机科学与技术"
+      }
+    }
+  ],
+  "educationSource": "Provided by the profile owner on 2026-11-19.",
+  "aboutDetails": [
+    {
+      "zh": "我的研究涵盖大模型与计算机视觉。大模型方面，我关注混合专家路由、稀疏计算、推理预算分配和可验证奖励强化学习。视觉方面，我关注弱监督语义分割、无监督域适应、医学图像分析和多模态视觉理解。",
+      "en": "My research spans large models and computer vision. For large models, I study mixture-of-experts routing, sparse computation, reasoning budgets, and reinforcement learning with verifiable rewards. In vision, I work on weakly supervised semantic segmentation, unsupervised domain adaptation, medical image analysis, and multimodal visual understanding."
+    },
+    {
+      "zh": "我也担任 ICASSP、CVPR 和 ICLR 等学术会议的审稿人。",
+      "en": "I also serve as a reviewer for conferences including ICASSP, CVPR, and ICLR."
+    }
+  ],
+  "advisor": {
+    "url": "https://itlab.tju.edu.cn/info/1037/1023.htm",
+    "en": "Prof. Xuewei Li",
+    "zh": "李雪威教授"
+  }
+}

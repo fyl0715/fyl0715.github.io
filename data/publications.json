@@ -1,0 +1,575 @@
+[
+  {
+    "id": "reaccess2026",
+    "title": "ReAccess: Look Once, Stay Focused with Efficient Test Time Memory",
+    "authors": [
+      "Tianhao Chen",
+      "Yilong Fan",
+      "Yuheng Wu",
+      "Xiaobin Hu",
+      "Dongman Lee"
+    ],
+    "year": 2026,
+    "date": "2026-11-16",
+    "venue": "arXiv preprint",
+    "kind": "preprint",
+    "doi": "10.48550/arXiv.2611.20936",
+    "url": "https://arxiv.org/abs/2611.20936",
+    "pdf": "https://arxiv.org/pdf/2611.20936",
+    "arxiv": "2611.20936",
+    "code": "https://github.com/ryu1ion/reaccess",
+    "project": "https://ryu1ion.github.io/reaccess/",
+    "keywords": [
+      "visual memory",
+      "vision-language models",
+      "视觉语言模型",
+      "视觉记忆"
+    ],
+    "image": {
+      "path": "assets/papers/reaccess2026.webp",
+      "kind": "original",
+      "source": "https://arxiv.org/pdf/2611.20936#page=4",
+      "figure": "Figure 2",
+      "width": 1666,
+      "height": 673,
+      "alt": {
+        "en": "ReAccess framework showing memory construction and utilization for vision-language reasoning.",
+        "zh": "ReAccess 框架图，展示视觉语言推理中的记忆构建与利用。"
+      },
+      "caption": {
+        "en": "Figure 2. ReAccess constructs visual memory during prefill and retrieves evidence during reasoning.",
+        "zh": "原论文图 2。ReAccess 在预填充阶段构建视觉记忆，并在推理时检索相关证据。"
+      }
+    },
+    "summary": {
+      "en": "Builds a compact visual memory in a single image pass and retrieves question-relevant evidence during inference to support fine-grained visual reasoning.",
+      "zh": "通过一次图像编码构建紧凑视觉记忆，并在推理时检索与问题相关的证据，支持细粒度视觉推理。"
+    }
+  },
+  {
+    "id": "erchord2026",
+    "title": "ER-Chord: Spatially Consistent One-Step Image Editing via Equal-Energy Reliability Redistribution",
+    "authors": [
+      "Peize Li",
+      "Hanzhen Zhao",
+      "Xingguo Xu",
+      "Yilong Fan",
+      "Zhen Tao",
+      "Bo Yin",
+      "Zhifei Liu",
+      "Qingdong He",
+      "Xiaobin Hu"
+    ],
+    "year": 2026,
+    "date": "2026-10-21",
+    "venue": "arXiv preprint",
+    "kind": "preprint",
+    "doi": "10.48550/arXiv.2610.29248",
+    "url": "https://arxiv.org/abs/2610.29248",
+    "pdf": "https://arxiv.org/pdf/2610.29248",
+    "arxiv": "2610.29248",
+    "project": "https://github.com/Peizeli1/ER-Chord",
+    "keywords": [
+      "image editing",
+      "equal energy",
+      "spatial consistency",
+      "图像编辑",
+      "空间一致性"
+    ],
+    "image": {
+      "path": "assets/papers/erchord2026.webp",
+      "kind": "original",
+      "source": "https://arxiv.org/pdf/2610.29248#page=2",
+      "figure": "Figure 1",
+      "width": 1563,
+      "height": 563,
+      "alt": {
+        "en": "ER-Chord framework for reliability-guided spatial redistribution in one-step editing.",
+        "zh": "ER-Chord 单步图像编辑框架，展示基于可靠性的空间重分配。"
+      },
+      "caption": {
+        "en": "Figure 1. ER-Chord estimates local reliability from endpoint agreement and redistributes a fixed control-energy budget.",
+        "zh": "原论文图 1。ER-Chord 根据端点一致性估计局部可靠性，并在总控制能量固定的条件下重新分配编辑强度。"
+      }
+    },
+    "summary": {
+      "en": "Redistributes a fixed editing-energy budget toward spatially reliable regions, improving source preservation in one-step image editing.",
+      "zh": "在总编辑能量固定的条件下，将编辑强度重新分配到可靠区域，从而在单步图像编辑中更好地保留原图。"
+    }
+  },
+  {
+    "id": "xmod2026",
+    "title": "X-MoD: Practical Scaling Laws for Sparse-Depth Routing Beyond Mixture-of-Depths",
+    "authors": [
+      "Bowen Dong",
+      "Yilong Fan",
+      "Tengyu Pan",
+      "Yike Zhang",
+      "Zhenyu Li",
+      "Zijian Zhang",
+      "Xuewei Li",
+      "Mei Yu",
+      "Jianyong Wang"
+    ],
+    "year": 2026,
+    "date": "2026-09-28",
+    "venue": "arXiv preprint",
+    "kind": "preprint",
+    "doi": "10.48550/arXiv.2609.34212",
+    "url": "https://arxiv.org/abs/2609.34212",
+    "pdf": "https://arxiv.org/pdf/2609.34212",
+    "arxiv": "2609.34212",
+    "code": null,
+    "equal_contribution_authors": [
+      "Bowen Dong",
+      "Yilong Fan"
+    ],
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:Y0pCki6q_DkC",
+    "keywords": [
+      "mixture of depths",
+      "MoD",
+      "scaling laws",
+      "稀疏深度",
+      "缩放定律",
+      "大模型"
+    ],
+    "image": {
+      "path": "assets/papers/xmod2026.webp",
+      "kind": "original",
+      "source": "https://arxiv.org/pdf/2609.34212",
+      "figure": "Figure 1",
+      "alt": {
+        "en": "MoD and X-MoD diagrams comparing layer organization and token routing within a layer.",
+        "zh": "MoD 与 X-MoD 的层间结构及层内 token 路由机制对比图。"
+      },
+      "caption": {
+        "en": "MoD and X-MoD architecture and routing mechanisms.",
+        "zh": "MoD 与 X-MoD 的结构和路由机制。"
+      },
+      "width": 1400,
+      "height": 532
+    },
+    "summary": {
+      "en": "Introduces a sparse-depth architecture that decouples token sparsity from the spacing of dense layers, and derives scaling laws for choosing routing configurations under a compute budget.",
+      "zh": "提出将 token 稀疏率与稠密层间隔解耦的稀疏深度架构，并建立缩放定律，指导给定算力预算下的路由配置选择。"
+    }
+  },
+  {
+    "id": "coupling2026",
+    "title": "The Coupling Tax: How Shared Token Budgets Undermine Visible Chain-of-Thought Under Fixed Output Limits",
+    "authors": [
+      "Wenhua Nie",
+      "Junlin Liu",
+      "Jianan Wu",
+      "Zijie Meng",
+      "Yilong Fan",
+      "Zhang Zijian",
+      "Haoran Zheng",
+      "Jyh-Shing Roger Jang"
+    ],
+    "year": 2026,
+    "date": "2026-05-08",
+    "venue": "arXiv preprint",
+    "kind": "preprint",
+    "doi": "10.48550/arXiv.2605.07686",
+    "url": "https://arxiv.org/abs/2605.07686",
+    "pdf": "https://arxiv.org/pdf/2605.07686",
+    "arxiv": "2605.07686",
+    "code": null,
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:Tyk-4Ss8FVUC",
+    "keywords": [
+      "reasoning",
+      "chain of thought",
+      "LLM",
+      "推理",
+      "思维链",
+      "大模型"
+    ],
+    "image": {
+      "path": "assets/papers/coupling2026.webp",
+      "kind": "original",
+      "source": "https://arxiv.org/pdf/2605.07686",
+      "figure": "Figure 1",
+      "alt": {
+        "en": "Two plots compare thinking and non-thinking accuracy against token budget and actual token use.",
+        "zh": "两幅曲线图比较思考与非思考模式的准确率随 token 预算和实际用量的变化。"
+      },
+      "caption": {
+        "en": "Accuracy under matched token budgets and actual token usage.",
+        "zh": "相同 token 预算及实际 token 用量下的准确率对比。"
+      },
+      "width": 1400,
+      "height": 658
+    },
+    "summary": {
+      "en": "Shows how explicit reasoning can crowd out final answers when both share a fixed token budget, and evaluates a strategy that budgets them separately.",
+      "zh": "揭示显式推理与最终答案共享固定 token 预算时，推理过程可能挤占答案空间，并评估了分别分配预算的策略。"
+    }
+  },
+  {
+    "id": "gradient2026",
+    "title": "Gradient Starvation in Binary-Reward GRPO: Why Group-Mean Centering Fails and Why the Simplest Fix Works",
+    "authors": [
+      "Wenhua Nie",
+      "Jianan Wu",
+      "Junlin Liu",
+      "Ziwei Li",
+      "Zheng Lin",
+      "Zhang Zijian",
+      "Yilong Fan",
+      "Haoran Zheng",
+      "Jyh-Shing Roger Jang"
+    ],
+    "year": 2026,
+    "date": "2026-05-08",
+    "venue": "arXiv preprint",
+    "kind": "preprint",
+    "doi": "10.48550/arXiv.2605.07689",
+    "url": "https://arxiv.org/abs/2605.07689",
+    "pdf": "https://arxiv.org/pdf/2605.07689",
+    "arxiv": "2605.07689",
+    "code": null,
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:zYLM7Y9cAGgC",
+    "keywords": [
+      "reinforcement learning",
+      "RLVR",
+      "GRPO",
+      "强化学习",
+      "大模型"
+    ],
+    "image": {
+      "path": "assets/papers/gradient2026.webp",
+      "kind": "original",
+      "source": "https://arxiv.org/pdf/2605.07689",
+      "figure": "Figure 1",
+      "alt": {
+        "en": "Bar chart comparing GSM8K accuracy for Sign, alternative advantage formulations, DrGRPO, and the base model.",
+        "zh": "柱状图比较 Sign、其他优势函数、DrGRPO 和基础模型的 GSM8K 准确率。"
+      },
+      "caption": {
+        "en": "GSM8K accuracy with different advantage formulations.",
+        "zh": "不同优势函数下的 GSM8K 准确率。"
+      },
+      "width": 1400,
+      "height": 703
+    },
+    "summary": {
+      "en": "Explains why GRPO loses its learning signal when all responses in a group receive the same binary reward, and evaluates a fixed-reference sign advantage to address this failure.",
+      "zh": "解释 GRPO 在组内响应获得相同二值奖励时为何失去学习信号，并评估了用固定参照的符号优势函数缓解这一问题的方法。"
+    }
+  },
+  {
+    "id": "maxscore2025",
+    "title": "Maximum Score Routing For Mixture-of-Experts",
+    "authors": [
+      "Bowen Dong",
+      "Yilong Fan",
+      "Yutao Sun",
+      "Zhenyu Li",
+      "Tengyu Pan",
+      "Zhou Xun",
+      "Jianyong Wang"
+    ],
+    "year": 2025,
+    "date": "2025-07",
+    "venue": "Findings of the Association for Computational Linguistics: ACL 2025",
+    "venue_short": "Findings of ACL 2025",
+    "kind": "conference",
+    "pages": "12619–12632",
+    "doi": "10.18653/v1/2025.findings-acl.653",
+    "url": "https://aclanthology.org/2025.findings-acl.653/",
+    "pdf": "https://aclanthology.org/2025.findings-acl.653.pdf",
+    "arxiv": "2508.12801",
+    "code": "https://github.com/dongbw18/MaxScore",
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:qjMakFHDy7sC",
+    "keywords": [
+      "MoE",
+      "mixture of experts",
+      "routing",
+      "混合专家",
+      "路由",
+      "大模型"
+    ],
+    "image": {
+      "path": "assets/papers/maxscore2025.webp",
+      "kind": "original",
+      "source": "https://aclanthology.org/2025.findings-acl.653.pdf#page=5",
+      "figure": "Figure 4",
+      "alt": {
+        "en": "Token-to-expert routing represented as a minimum-cost maximum-flow graph with a source and sink.",
+        "zh": "将Token到专家的路由表示为带有源节点和汇节点的最小费用最大流图。"
+      },
+      "caption": {
+        "en": "Minimum-cost maximum-flow formulation of MoE routing.",
+        "zh": "MoE路由的最小费用最大流建模。"
+      },
+      "width": 1395,
+      "height": 930
+    },
+    "summary": {
+      "en": "Models token-to-expert assignment as a minimum-cost maximum-flow problem and combines it with SoftTopk to improve routing under expert capacity constraints.",
+      "zh": "将 token 到专家的分配建模为最小费用最大流问题，并结合 SoftTopk 改善专家容量约束下的路由。"
+    },
+    "short_title": "MaxScore",
+    "notification_month": "2025-05"
+  },
+  {
+    "id": "ucfe2025",
+    "title": "Unsupervised Domain Adaptation for Semantic Segmentation with Unstable Category Feature Enhancement",
+    "authors": [
+      "Xuewei Li",
+      "Xueyang Liu",
+      "Jie Gao",
+      "Zijian Zhang",
+      "Yilong Fan",
+      "Mei Yu"
+    ],
+    "year": 2025,
+    "date": "2025-10-21",
+    "venue": "ECAI 2025: 28th European Conference on Artificial Intelligence",
+    "venue_short": "ECAI 2025",
+    "kind": "conference",
+    "pages": "2370–2377",
+    "doi": "10.3233/FAIA251082",
+    "url": "https://doi.org/10.3233/FAIA251082",
+    "pdf": null,
+    "arxiv": null,
+    "code": null,
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:W7OEmFMy1HYC",
+    "keywords": [
+      "domain adaptation",
+      "semantic segmentation",
+      "域适应",
+      "语义分割"
+    ],
+    "image": {
+      "path": "assets/papers/ucfe2025.webp",
+      "kind": "original",
+      "source": "https://doi.org/10.3233/FAIA251082",
+      "figure": "Figure 2",
+      "alt": {
+        "en": "UCFE architecture with teacher–student segmentation, entropy-guided separation of unstable categories, and reverse spatial and global channel attention.",
+        "zh": "UCFE整体框架：教师—学生分割、基于熵的不稳定类别解耦，以及反向空间注意力和全局通道注意力。"
+      },
+      "caption": {
+        "en": "Original paper, Fig. 2 · UCFE framework",
+        "zh": "论文原图，图2 · UCFE整体框架"
+      },
+      "width": 1057,
+      "height": 446
+    },
+    "summary": {
+      "en": "Dynamically identifies unstable categories and enhances their features to improve semantic segmentation across domains without target-domain labels.",
+      "zh": "在无需目标域标注的条件下，动态识别不稳定类别并增强其特征，以改善跨域语义分割。"
+    },
+    "short_title": "UCFE",
+    "notification_month": "2025-07"
+  },
+  {
+    "id": "ultrasound2025",
+    "title": "Ultrasound image segmentation of thyroid nodule via latent semantic feature co-registration",
+    "authors": [
+      "Xuewei Li",
+      "Yaqiao Zhu",
+      "Yilong Fan",
+      "Xi Wei",
+      "Ruixuan Zhang",
+      "Yuan Tian",
+      "Zhiqiang Liu"
+    ],
+    "year": 2025,
+    "venue": "Biomedical Signal Processing and Control",
+    "volume": "108",
+    "article_number": "107971",
+    "kind": "journal",
+    "doi": "10.1016/j.bspc.2025.107971",
+    "url": "https://doi.org/10.1016/j.bspc.2025.107971",
+    "pdf": null,
+    "arxiv": null,
+    "code": null,
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:2osOgNQ5qMEC",
+    "keywords": [
+      "medical imaging",
+      "thyroid",
+      "ultrasound",
+      "医学图像",
+      "甲状腺",
+      "超声"
+    ],
+    "image": {
+      "path": "assets/papers/ultrasound2025.webp",
+      "kind": "original",
+      "source": "https://doi.org/10.1016/j.bspc.2025.107971",
+      "figure": "Figure 3",
+      "alt": {
+        "en": "Thyroid ultrasound segmentation framework combining atlas and target semantic features, Half-STN registration, spatially transformed atlas labels, and weighted label fusion.",
+        "zh": "甲状腺超声分割框架：图谱与目标图像的语义特征、Half-STN配准、图谱标签空间变换及加权标签融合。"
+      },
+      "caption": {
+        "en": "Original paper, Fig. 3 · Semantic extraction and deformation fusion",
+        "zh": "论文原图，图3 · 语义提取与形变融合"
+      },
+      "width": 2400,
+      "height": 712
+    },
+    "summary": {
+      "en": "Registers atlas and target ultrasound images in a learned semantic feature space and fuses the aligned labels to segment thyroid nodules.",
+      "zh": "在学习到的潜在语义特征空间中配准图谱与目标超声图像，并融合对齐后的标签，实现甲状腺结节分割。"
+    }
+  },
+  {
+    "id": "mambadfan2025",
+    "title": "Mamba-Dfan: Mamba-Driven Dual-Branch Frequency-Domain Network for Rgb-D and Rgb-T Salient Object Detection",
+    "authors": [
+      "Xuewei Li",
+      "Kewei Zhang",
+      "Mei Yu",
+      "Zijian Zhang",
+      "Yilong Fan",
+      "Jie Gao"
+    ],
+    "year": 2025,
+    "date": "2025-07-02",
+    "venue": "SSRN preprint",
+    "kind": "preprint",
+    "doi": "10.2139/ssrn.5335445",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5335445",
+    "pdf": null,
+    "arxiv": null,
+    "code": null,
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:IjCSPb-OGe4C",
+    "keywords": [
+      "Mamba",
+      "salient object detection",
+      "RGB-D",
+      "RGB-T",
+      "显著性检测"
+    ],
+    "image": {
+      "path": "assets/papers/mambadfan2025.webp",
+      "kind": "original",
+      "source": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5335445",
+      "figure": "Figure 1",
+      "width": 1600,
+      "height": 757,
+      "alt": {
+        "en": "Mamba-DFAN architecture with dual-band frequency modeling and cross-modal feature fusion.",
+        "zh": "Mamba-DFAN 整体架构，展示双频段建模与跨模态特征融合。"
+      },
+      "caption": {
+        "en": "Figure 1. Mamba-DFAN architecture with dual-band frequency modeling and cross-modal feature fusion.",
+        "zh": "原论文图 1。Mamba-DFAN 整体架构，展示双频段建模与跨模态特征融合。"
+      }
+    },
+    "summary": {
+      "en": "Uses Mamba to model low-frequency structure and high-frequency details, then adaptively fuses RGB with depth or thermal cues for salient object detection.",
+      "zh": "利用 Mamba 建模低频结构与高频细节，并自适应融合 RGB 与深度或热红外信息，用于显著性目标检测。"
+    }
+  },
+  {
+    "id": "pixel2024",
+    "title": "Pixel-wise Reclassification with Prototypes for Enhancing Weakly Supervised Semantic Segmentation",
+    "authors": [
+      "Yujie Diao",
+      "Ruiguo Yu",
+      "Xuewei Li",
+      "Yilong Fan",
+      "Zhiqiang Liu",
+      "Mei Yu",
+      "Chenhan Wang",
+      "Jie Gao"
+    ],
+    "year": 2024,
+    "venue": "ECAI 2024: 27th European Conference on Artificial Intelligence",
+    "venue_short": "ECAI 2024",
+    "pages": "218–225",
+    "kind": "conference",
+    "doi": "10.3233/FAIA240491",
+    "url": "https://doi.org/10.3233/FAIA240491",
+    "pdf": "https://journals.sagepub.com/doi/pdf/10.3233/FAIA240491",
+    "arxiv": null,
+    "code": null,
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:d1gkVwhDpl0C",
+    "keywords": [
+      "weakly supervised",
+      "semantic segmentation",
+      "弱监督",
+      "语义分割"
+    ],
+    "image": {
+      "path": "assets/papers/pixel2024.webp",
+      "kind": "original",
+      "source": "https://journals.sagepub.com/doi/pdf/10.3233/FAIA240491",
+      "figure": "Figure 3",
+      "width": 1574,
+      "height": 981,
+      "alt": {
+        "en": "PtReCl architecture showing pseudo-mask restoration, prototype acquisition, pixel reclassification, and mask refinement.",
+        "zh": "PtReCl 架构，包含伪掩码恢复、原型获取、像素重分类和掩码再细化。"
+      },
+      "caption": {
+        "en": "Figure 3. PtReCl architecture showing pseudo-mask restoration, prototype acquisition, pixel reclassification, and mask refinement.",
+        "zh": "原论文图 3。PtReCl 架构，包含伪掩码恢复、原型获取、像素重分类和掩码再细化。"
+      }
+    },
+    "summary": {
+      "en": "Learns foreground and background prototypes to reclassify pixels in noisy pseudo-masks, improving supervision for weakly supervised semantic segmentation.",
+      "zh": "学习前景和背景原型，对含噪伪掩码中的像素进行重分类，为弱监督语义分割提供更准确的监督信号。"
+    },
+    "short_title": "PtReCl",
+    "notification_month": "2024-07"
+  },
+  {
+    "id": "bdcl2024",
+    "title": "Balanced And Discriminative Contrastive Learning For Class-Imbalanced Medical Images",
+    "authors": [
+      "Xuewei Li",
+      "Yilong Fan",
+      "Hao Zheng",
+      "Jie Gao",
+      "Xi Wei",
+      "Mei Yu"
+    ],
+    "year": 2024,
+    "date": "2024-04-14",
+    "venue": "ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+    "venue_short": "ICASSP 2024",
+    "pages": "3735–3739",
+    "kind": "conference",
+    "doi": "10.1109/ICASSP48485.2024.10447586",
+    "url": "https://doi.org/10.1109/ICASSP48485.2024.10447586",
+    "pdf": null,
+    "arxiv": null,
+    "code": null,
+    "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:u-x6o8ySG0sC",
+    "keywords": [
+      "contrastive learning",
+      "class imbalance",
+      "medical imaging",
+      "对比学习",
+      "医学图像",
+      "类别不平衡"
+    ],
+    "image": {
+      "path": "assets/papers/bdcl2024-method.png",
+      "kind": "adapted",
+      "source": "https://doi.org/10.1109/ICASSP48485.2024.10447586",
+      "width": 1774,
+      "height": 887,
+      "alt": {
+        "en": "BDCL architecture with shared encoders, representation learning, classifier learning, and an epoch-dependent loss weight.",
+        "zh": "BDCL 双分支架构，展示共享编码器、表征学习、分类器学习及随训练轮次变化的损失权重。"
+      },
+      "caption": {
+        "en": "BDCL training framework, redrawn in English from the author-provided Chinese diagram.",
+        "zh": "BDCL 训练框架，根据作者提供的中文图重绘为英文版。"
+      }
+    },
+    "summary": {
+      "en": "Combines dynamic temperature learning with hard-example prototypes to learn more balanced and discriminative representations from class-imbalanced medical images.",
+      "zh": "结合动态温度学习与困难样本原型，从类别不平衡的医学图像中学习更均衡、更具判别力的特征表征。"
+    },
+    "short_title": "BDCL",
+    "notification_month": "2023-12"
+  }
+]

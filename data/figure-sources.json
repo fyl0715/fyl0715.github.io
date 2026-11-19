@@ -1,0 +1,188 @@
+[
+  {
+    "id": "reaccess2026",
+    "asset": "assets/papers/reaccess2026.webp",
+    "figure": "Figure 2",
+    "page": 4,
+    "source_url": "https://arxiv.org/pdf/2611.20936#page=4",
+    "processing": "Cropped the full framework from page 4 of arXiv v1."
+  },
+  {
+    "id": "erchord2026",
+    "asset": "assets/papers/erchord2026.webp",
+    "figure": "Figure 1",
+    "page": 2,
+    "source_url": "https://arxiv.org/pdf/2610.29248#page=2",
+    "processing": "Cropped the complete method overview from page 2 of the arXiv PDF."
+  },
+  {
+    "id": "xmod2026",
+    "source_url": "https://arxiv.org/pdf/2609.34212",
+    "paper_url": "https://arxiv.org/abs/2609.34212",
+    "figure": "Figure 1",
+    "page": 2,
+    "alt": {
+      "en": "MoD and X-MoD diagrams comparing layer organization and token routing within a layer.",
+      "zh": "MoD 与 X-MoD 的层间结构及层内 token 路由机制对比图。"
+    },
+    "caption": {
+      "en": "MoD and X-MoD architecture and routing mechanisms.",
+      "zh": "MoD 与 X-MoD 的结构和路由机制。"
+    },
+    "content_used": "Full Figure 1, panels (a) inter-layer architecture comparison and (b) intra-layer computation mechanism; original caption excluded.",
+    "crop_at_1800px_page": [
+      310,
+      183,
+      1087,
+      478
+    ],
+    "notes": "Original paper diagram; no redrawing or substantive edits.",
+    "width": 1400,
+    "height": 532,
+    "bytes": 118848,
+    "format": "webp",
+    "encoding": "lossless",
+    "processing": "Rendered source PDF page using Poppler at 3600px page height, cropped the complete figure, downsampled to 1400px width with Lanczos, and encoded losslessly to WebP.",
+    "verified_visually": true,
+    "asset": "assets/papers/xmod2026.webp"
+  },
+  {
+    "id": "coupling2026",
+    "source_url": "https://arxiv.org/pdf/2605.07686",
+    "paper_url": "https://arxiv.org/abs/2605.07686",
+    "figure": "Figure 1",
+    "page": 2,
+    "alt": {
+      "en": "Two plots compare thinking and non-thinking accuracy against token budget and actual token use.",
+      "zh": "两幅曲线图比较思考与非思考模式的准确率随 token 预算和实际用量的变化。"
+    },
+    "caption": {
+      "en": "Accuracy under matched token budgets and actual token usage.",
+      "zh": "相同 token 预算及实际 token 用量下的准确率对比。"
+    },
+    "content_used": "Full Figure 1, both accuracy-vs-token-budget and accuracy-vs-actual-token-usage panels; original caption excluded.",
+    "crop_at_1800px_page": [
+      242,
+      158,
+      1151,
+      585
+    ],
+    "notes": "Original chart preserved exactly. The source paper figure and textual caption contain inconsistent numeric details; the supplied neutral caption does not repeat those numbers. Figure 4 is a baseline pipeline, so Figure 1 was selected as the representative original result.",
+    "width": 1400,
+    "height": 658,
+    "bytes": 111740,
+    "format": "webp",
+    "encoding": "lossless",
+    "processing": "Rendered source PDF page using Poppler at 3600px page height, cropped the complete figure, downsampled to 1400px width with Lanczos, and encoded losslessly to WebP.",
+    "verified_visually": true,
+    "asset": "assets/papers/coupling2026.webp"
+  },
+  {
+    "id": "gradient2026",
+    "source_url": "https://arxiv.org/pdf/2605.07689",
+    "paper_url": "https://arxiv.org/abs/2605.07689",
+    "figure": "Figure 1",
+    "page": 3,
+    "alt": {
+      "en": "Bar chart comparing GSM8K accuracy for Sign, alternative advantage formulations, DrGRPO, and the base model.",
+      "zh": "柱状图比较 Sign、其他优势函数、DrGRPO 和基础模型的 GSM8K 准确率。"
+    },
+    "caption": {
+      "en": "GSM8K accuracy with different advantage formulations.",
+      "zh": "不同优势函数下的 GSM8K 准确率。"
+    },
+    "content_used": "Complete Figure 1 bar chart with all seven bars, labels, baseline, and standard-deviation error bars; original caption excluded.",
+    "crop_at_1800px_page": [
+      241,
+      164,
+      1153,
+      622
+    ],
+    "notes": "Original result chart; no redrawing or substantive edits.",
+    "width": 1400,
+    "height": 703,
+    "bytes": 40242,
+    "format": "webp",
+    "encoding": "lossless",
+    "processing": "Rendered source PDF page using Poppler at 3600px page height, cropped the complete figure, downsampled to 1400px width with Lanczos, and encoded losslessly to WebP.",
+    "verified_visually": true,
+    "asset": "assets/papers/gradient2026.webp"
+  },
+  {
+    "id": "maxscore2025",
+    "source_url": "https://aclanthology.org/2025.findings-acl.653.pdf#page=5",
+    "paper_url": "https://aclanthology.org/2025.findings-acl.653/",
+    "figure": "Figure 4",
+    "page": 5,
+    "alt_en": "Token-to-expert routing represented as a minimum-cost maximum-flow graph with a source and sink.",
+    "alt_zh": "将Token到专家的路由表示为带有源节点和汇节点的最小费用最大流图。",
+    "caption_en": "Minimum-cost maximum-flow formulation of MoE routing.",
+    "caption_zh": "MoE路由的最小费用最大流建模。",
+    "kind": "original",
+    "crop_bbox": [
+      80,
+      108,
+      281,
+      242
+    ],
+    "asset": "assets/papers/maxscore2025.webp"
+  },
+  {
+    "id": "ucfe2025",
+    "status": "original-figure",
+    "source": "https://journals.sagepub.com/cms/10.3233/FAIA251082/asset/70f24bb2-971a-4613-b770-6461c11ced0c/assets/graphic/10.3233_faia251082-fig2.jpg",
+    "paperUrl": "https://doi.org/10.3233/FAIA251082",
+    "figure": "Figure 2",
+    "alt": {
+      "en": "UCFE architecture with teacher–student segmentation, entropy-guided separation of unstable categories, and reverse spatial and global channel attention.",
+      "zh": "UCFE整体框架：教师—学生分割、基于熵的不稳定类别解耦，以及反向空间注意力和全局通道注意力。"
+    },
+    "caption": {
+      "en": "Original paper, Fig. 2 · UCFE framework",
+      "zh": "论文原图，图2 · UCFE整体框架"
+    },
+    "verification": "SAGE full article lists Xuewei Li, Xueyang Liu, Jie Gao, Zijian Zhang, Yilong Fan and Mei Yu, DOI FAIA251082. Figure caption identifies UCFE, DUDM and MUEM. Downloaded public image matches the caption; visually inspected. SAGE migration/online timestamp is 2026; conference volume remains ECAI 2025.",
+    "processing": "Entire original image retained, recompressed as WebP; no semantic edits.",
+    "asset": "assets/papers/ucfe2025.webp"
+  },
+  {
+    "id": "ultrasound2025",
+    "status": "original-figure",
+    "source": "https://ars.els-cdn.com/content/image/1-s2.0-S1746809425004823-gr3_lrg.jpg",
+    "paperUrl": "https://doi.org/10.1016/j.bspc.2025.107971",
+    "figure": "Figure 3",
+    "alt": {
+      "en": "Thyroid ultrasound segmentation framework combining atlas and target semantic features, Half-STN registration, spatially transformed atlas labels, and weighted label fusion.",
+      "zh": "甲状腺超声分割框架：图谱与目标图像的语义特征、Half-STN配准、图谱标签空间变换及加权标签融合。"
+    },
+    "caption": {
+      "en": "Original paper, Fig. 3 · Semantic extraction and deformation fusion",
+      "zh": "论文原图，图3 · 语义提取与形变融合"
+    },
+    "verification": "Asset PII S1746809425004823 is the formal 2025 article for DOI 10.1016/j.bspc.2025.107971, whose author list includes Yilong Fan. This is NOT the older arXiv:2310.09221 manuscript, which has a different author list. Original asset from Elsevier public image CDN, visually inspected; graph labels match latent semantic feature co-registration method. Fig. 3 identified by publisher image number gr3; publisher full caption unavailable.",
+    "processing": "Entire original image retained, reduced from 3083×915 to 2400×712 and recompressed as WebP; no semantic edits.",
+    "asset": "assets/papers/ultrasound2025.webp"
+  },
+  {
+    "id": "mambadfan2025",
+    "asset": "assets/papers/mambadfan2025.webp",
+    "figure": "Figure 1",
+    "page": 3,
+    "source_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5335445",
+    "processing": "Cropped from the author-provided paper PDF."
+  },
+  {
+    "id": "pixel2024",
+    "asset": "assets/papers/pixel2024.webp",
+    "figure": "Figure 3",
+    "page": 3,
+    "source_url": "https://journals.sagepub.com/doi/pdf/10.3233/FAIA240491",
+    "processing": "Cropped from the author-provided paper PDF."
+  },
+  {
+    "id": "bdcl2024",
+    "asset": "assets/papers/bdcl2024-method.png",
+    "source_url": "https://doi.org/10.1109/ICASSP48485.2024.10447586",
+    "processing": "English redraw of the author-provided Chinese BDCL method diagram."
+  }
+]

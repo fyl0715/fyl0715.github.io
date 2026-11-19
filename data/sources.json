@@ -1,0 +1,339 @@
+{
+  "checked_date": "2026-11-19",
+  "person": "Yilong Fan",
+  "scholar_profile": "https://scholar.google.com/citations?user=1bKyJZQAAAAJ&hl=en",
+  "identity_confirmation": {
+    "alphaxiv_profile": "https://www.alphaxiv.org/@yilong-fan",
+    "alphaxiv_scholar_link": "https://scholar.google.com/citations?user=1bKyJZQAAAAJ",
+    "all_nine_records_matched_scholar_snapshot": true
+  },
+  "scope": "Exactly 9 works from provided Scholar profile; no additions from name-only matching.",
+  "summary": {
+    "works": 9,
+    "journal_articles": 1,
+    "conference_papers": 4,
+    "preprints": 4,
+    "verified_official_code_repositories": 1
+  },
+  "publications": [
+    {
+      "id": "xmod2026",
+      "title": "X-MoD: Practical Scaling Laws for Sparse-Depth Routing Beyond Mixture-of-Depths",
+      "authors": [
+        "Bowen Dong",
+        "Yilong Fan",
+        "Tengyu Pan",
+        "Yike Zhang",
+        "Zhenyu Li",
+        "Zijian Zhang",
+        "Xuewei Li",
+        "Mei Yu",
+        "Jianyong Wang"
+      ],
+      "year": 2026,
+      "date": "2026-09-28",
+      "venue": "arXiv preprint",
+      "kind": "preprint",
+      "doi": "10.48550/arXiv.2609.34212",
+      "url": "https://arxiv.org/abs/2609.34212",
+      "pdf": "https://arxiv.org/pdf/2609.34212",
+      "arxiv": "2609.34212",
+      "code": null,
+      "equal_contribution_authors": [
+        "Bowen Dong",
+        "Yilong Fan"
+      ],
+      "scholar_citation_id": "Y0pCki6q_DkC",
+      "sources": [
+        "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:Y0pCki6q_DkC",
+        "https://arxiv.org/abs/2609.34212",
+        "https://arxiv.org/html/2609.34212v1"
+      ],
+      "notes": [
+        "Equal contribution explicitly stated in the paper author block.",
+        "No official project/code link found in the abstract or full HTML."
+      ],
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:Y0pCki6q_DkC"
+    },
+    {
+      "id": "coupling2026",
+      "title": "The Coupling Tax: How Shared Token Budgets Undermine Visible Chain-of-Thought Under Fixed Output Limits",
+      "authors": [
+        "Wenhua Nie",
+        "Junlin Liu",
+        "Jianan Wu",
+        "Zijie Meng",
+        "Yilong Fan",
+        "Zhang Zijian",
+        "Haoran Zheng",
+        "Jyh-Shing Roger Jang"
+      ],
+      "year": 2026,
+      "date": "2026-05-08",
+      "venue": "arXiv preprint",
+      "kind": "preprint",
+      "doi": "10.48550/arXiv.2605.07686",
+      "url": "https://arxiv.org/abs/2605.07686",
+      "pdf": "https://arxiv.org/pdf/2605.07686",
+      "arxiv": "2605.07686",
+      "code": null,
+      "scholar_citation_id": "Tyk-4Ss8FVUC",
+      "sources": [
+        "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:Tyk-4Ss8FVUC",
+        "https://arxiv.org/abs/2605.07686",
+        "https://arxiv.org/html/2605.07686v1"
+      ],
+      "notes": [
+        "Preserve author spelling/order Zhang Zijian as shown on arXiv and Scholar.",
+        "No official project/code link found in the abstract or full HTML."
+      ],
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:Tyk-4Ss8FVUC"
+    },
+    {
+      "id": "gradient2026",
+      "title": "Gradient Starvation in Binary-Reward GRPO: Why Group-Mean Centering Fails and Why the Simplest Fix Works",
+      "authors": [
+        "Wenhua Nie",
+        "Jianan Wu",
+        "Junlin Liu",
+        "Ziwei Li",
+        "Zheng Lin",
+        "Zhang Zijian",
+        "Yilong Fan",
+        "Haoran Zheng",
+        "Jyh-Shing Roger Jang"
+      ],
+      "year": 2026,
+      "date": "2026-05-08",
+      "venue": "arXiv preprint",
+      "kind": "preprint",
+      "doi": "10.48550/arXiv.2605.07689",
+      "url": "https://arxiv.org/abs/2605.07689",
+      "pdf": "https://arxiv.org/pdf/2605.07689",
+      "arxiv": "2605.07689",
+      "code": null,
+      "scholar_citation_id": "zYLM7Y9cAGgC",
+      "sources": [
+        "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:zYLM7Y9cAGgC",
+        "https://arxiv.org/abs/2605.07689",
+        "https://arxiv.org/html/2605.07689v1"
+      ],
+      "notes": [
+        "Preserve author spelling/order Zhang Zijian as shown on arXiv and Scholar.",
+        "No official project/code link found; a GitHub link in the bibliography points to TRL and is not this paper code."
+      ],
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:zYLM7Y9cAGgC"
+    },
+    {
+      "id": "maxscore2025",
+      "title": "Maximum Score Routing For Mixture-of-Experts",
+      "authors": [
+        "Bowen Dong",
+        "Yilong Fan",
+        "Yutao Sun",
+        "Zhenyu Li",
+        "Tengyu Pan",
+        "Zhou Xun",
+        "Jianyong Wang"
+      ],
+      "year": 2025,
+      "date": "2025-07",
+      "venue": "Findings of the Association for Computational Linguistics: ACL 2025",
+      "venue_short": "Findings of ACL 2025",
+      "kind": "conference",
+      "pages": "12619–12632",
+      "doi": "10.18653/v1/2025.findings-acl.653",
+      "url": "https://aclanthology.org/2025.findings-acl.653/",
+      "pdf": "https://aclanthology.org/2025.findings-acl.653.pdf",
+      "arxiv": "2508.12801",
+      "code": "https://github.com/dongbw18/MaxScore",
+      "scholar_citation_id": "qjMakFHDy7sC",
+      "sources": [
+        "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:qjMakFHDy7sC",
+        "https://aclanthology.org/2025.findings-acl.653/",
+        "https://arxiv.org/abs/2508.12801",
+        "https://github.com/dongbw18/MaxScore"
+      ],
+      "notes": [
+        "Use formal ACL venue; do not list the arXiv version as an additional publication.",
+        "ACL metadata spells one author Zhou Xun while arXiv spells Xun Zhou; this record follows the formal ACL record.",
+        "No equal-contribution marker verified for Yilong Fan in available HTML."
+      ],
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:qjMakFHDy7sC"
+    },
+    {
+      "id": "ucfe2025",
+      "title": "Unsupervised Domain Adaptation for Semantic Segmentation with Unstable Category Feature Enhancement",
+      "authors": [
+        "Xuewei Li",
+        "Xueyang Liu",
+        "Jie Gao",
+        "Zijian Zhang",
+        "Yilong Fan",
+        "Mei Yu"
+      ],
+      "year": 2025,
+      "date": "2025-10-21",
+      "venue": "ECAI 2025: 28th European Conference on Artificial Intelligence",
+      "venue_short": "ECAI 2025",
+      "kind": "conference",
+      "pages": "2370–2377",
+      "doi": "10.3233/FAIA251082",
+      "url": "https://doi.org/10.3233/FAIA251082",
+      "pdf": null,
+      "arxiv": null,
+      "code": null,
+      "scholar_citation_id": "W7OEmFMy1HYC",
+      "sources": [
+        "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:W7OEmFMy1HYC",
+        "https://journals.sagepub.com/doi/10.3233/FAIA251082",
+        "https://dblp.org/rec/conf/ecai/LiLGZF025",
+        "https://www.scienceopen.com/book?vid=4cb4140a-5d80-4679-ad39-839b2d628ac6"
+      ],
+      "notes": [
+        "Use 2025 per Scholar, proceedings title, and DBLP. Sage migrated landing page says online August 25, 2026; this is not used to change conference year.",
+        "No official code link verified."
+      ],
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:W7OEmFMy1HYC"
+    },
+    {
+      "id": "ultrasound2025",
+      "title": "Ultrasound image segmentation of thyroid nodule via latent semantic feature co-registration",
+      "authors": [
+        "Xuewei Li",
+        "Yaqiao Zhu",
+        "Yilong Fan",
+        "Xi Wei",
+        "Ruixuan Zhang",
+        "Yuan Tian",
+        "Zhiqiang Liu"
+      ],
+      "year": 2025,
+      "venue": "Biomedical Signal Processing and Control",
+      "volume": "108",
+      "article_number": "107971",
+      "kind": "journal",
+      "doi": "10.1016/j.bspc.2025.107971",
+      "url": "https://doi.org/10.1016/j.bspc.2025.107971",
+      "pdf": null,
+      "arxiv": null,
+      "code": null,
+      "scholar_citation_id": "2osOgNQ5qMEC",
+      "sources": [
+        "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:2osOgNQ5qMEC",
+        "https://www.sciencedirect.com/science/article/pii/S1746809425004823",
+        "https://www.sciencedirect.com/science/article/abs/pii/S1746809425004823",
+        "https://dblp.org/rec/journals/bspc/LiZFWZTL25"
+      ],
+      "notes": [
+        "The same-title earlier arXiv:2310.09221 has different authors and does not list Yilong Fan; omit that arXiv link from this publication to avoid incorrect attribution.",
+        "Published paper CRediT statement explicitly names Yilong Fan.",
+        "No official code or openly accessible formal-version PDF verified."
+      ],
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:2osOgNQ5qMEC"
+    },
+    {
+      "id": "mambadfan2025",
+      "title": "Mamba-Dfan: Mamba-Driven Dual-Branch Frequency-Domain Network for Rgb-D and Rgb-T Salient Object Detection",
+      "authors": [
+        "Xuewei Li",
+        "Kewei Zhang",
+        "Mei Yu",
+        "Zijian Zhang",
+        "Yilong Fan",
+        "Jie Gao"
+      ],
+      "year": 2025,
+      "date": "2025-07-02",
+      "venue": "SSRN preprint",
+      "kind": "preprint",
+      "doi": "10.2139/ssrn.5335445",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5335445",
+      "pdf": null,
+      "arxiv": null,
+      "code": null,
+      "scholar_citation_id": "IjCSPb-OGe4C",
+      "sources": [
+        "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:IjCSPb-OGe4C",
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5335445"
+      ],
+      "notes": [
+        "Scholar year field is blank/zero; year 2025 comes from primary SSRN indexed page: Posted 2 Jul 2025.",
+        "SSRN landing-page direct fetch returns 403, but indexed first-party search result exposes title, author list, posted date and DOI.",
+        "No journal publication or official code link verified."
+      ],
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:IjCSPb-OGe4C"
+    },
+    {
+      "id": "pixel2024",
+      "title": "Pixel-wise Reclassification with Prototypes for Enhancing Weakly Supervised Semantic Segmentation",
+      "authors": [
+        "Yujie Diao",
+        "Ruiguo Yu",
+        "Xuewei Li",
+        "Yilong Fan",
+        "Zhiqiang Liu",
+        "Mei Yu",
+        "Chenhan Wang",
+        "Jie Gao"
+      ],
+      "year": 2024,
+      "venue": "ECAI 2024: 27th European Conference on Artificial Intelligence",
+      "venue_short": "ECAI 2024",
+      "pages": "218–225",
+      "kind": "conference",
+      "doi": "10.3233/FAIA240491",
+      "url": "https://doi.org/10.3233/FAIA240491",
+      "pdf": "https://journals.sagepub.com/doi/pdf/10.3233/FAIA240491",
+      "arxiv": null,
+      "code": null,
+      "scholar_citation_id": "d1gkVwhDpl0C",
+      "sources": [
+        "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:d1gkVwhDpl0C",
+        "https://journals.sagepub.com/doi/pdf/10.3233/FAIA240491",
+        "https://dblp.org/rec/conf/ecai/DiaoYLFLYWG24"
+      ],
+      "notes": [
+        "Primary publisher PDF verifies all authors, year, conference and DOI.",
+        "No official code link found in PDF or targeted search."
+      ],
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:d1gkVwhDpl0C"
+    },
+    {
+      "id": "bdcl2024",
+      "title": "Balanced And Discriminative Contrastive Learning For Class-Imbalanced Medical Images",
+      "authors": [
+        "Xuewei Li",
+        "Yilong Fan",
+        "Hao Zheng",
+        "Jie Gao",
+        "Xi Wei",
+        "Mei Yu"
+      ],
+      "year": 2024,
+      "date": "2024-04-14",
+      "venue": "ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+      "venue_short": "ICASSP 2024",
+      "pages": "3735–3739",
+      "kind": "conference",
+      "doi": "10.1109/ICASSP48485.2024.10447586",
+      "url": "https://doi.org/10.1109/ICASSP48485.2024.10447586",
+      "pdf": null,
+      "arxiv": null,
+      "code": null,
+      "scholar_citation_id": "u-x6o8ySG0sC",
+      "sources": [
+        "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:u-x6o8ySG0sC",
+        "https://api.crossref.org/works/10.1109/ICASSP48485.2024.10447586",
+        "https://ieeexplore.ieee.org/document/10447586",
+        "https://dblp.org/rec/conf/icassp/LiFZGWY24"
+      ],
+      "notes": [
+        "IEEE-deposited Crossref record verifies full author list, title, pages and publication date.",
+        "Author is Hao Zheng, not Haoran Zheng.",
+        "No official code or open PDF verified."
+      ],
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&user=1bKyJZQAAAAJ&citation_for_view=1bKyJZQAAAAJ:u-x6o8ySG0sC"
+    }
+  ]
+}
