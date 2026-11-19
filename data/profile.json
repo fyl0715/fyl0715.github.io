@@ -100,8 +100,8 @@
   "educationSource": "Provided by the profile owner on 2026-11-19.",
   "aboutDetails": [
     {
-      "zh": "我的研究涵盖大模型与计算机视觉。大模型方面，我关注混合专家路由、稀疏计算、推理预算分配和可验证奖励强化学习。视觉方面，我关注弱监督语义分割、无监督域适应、医学图像分析和多模态视觉理解。",
-      "en": "My research spans large models and computer vision. For large models, I study mixture-of-experts routing, sparse computation, reasoning budgets, and reinforcement learning with verifiable rewards. In vision, I work on weakly supervised semantic segmentation, unsupervised domain adaptation, medical image analysis, and multimodal visual understanding."
+      "zh": "我主要研究大模型中的条件计算，关注如何在有限算力预算下，将计算分配给合适的专家和网络层。MaxScore 研究混合专家模型中的 token 路由，X-MoD 探索稀疏深度路由及其缩放规律。我也关注高效推理和多模态视觉理解。",
+      "en": "My research focuses on conditional computation in large models. I study how to allocate a limited compute budget across experts and network layers. MaxScore addresses token routing in mixture-of-experts models, while X-MoD explores sparse depth routing and its scaling laws. I also work on efficient inference and multimodal visual understanding."
     },
     {
       "zh": "我也担任 ICASSP、CVPR 和 ICLR 等学术会议的审稿人。",

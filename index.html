@@ -68,6 +68,13 @@ main { min-width: 0; }
 section { scroll-margin-top: 2rem; }
 h2 { font-size: 1.65rem; line-height: 1.3; letter-spacing: -.025em; margin: 0 0 1.2rem; font-weight: 600; }
 .about p { margin: 0 0 1rem; }
+.featured-works { margin-top: 1.25rem; }
+.featured-works h3 { margin: 0 0 .6rem; font-size: 1rem; }
+.featured-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; }
+.featured-links a { display: grid; align-content: start; gap: .2rem; min-width: 0; padding: .7rem .85rem; border: 1px solid var(--line); border-radius: .4rem; text-decoration: none; }
+.featured-links a:hover { border-color: var(--blue); }
+.featured-links span { color: var(--muted); font-size: .85rem; }
+.publication { scroll-margin-top: 1rem; }
 .research h2 { font-size: 1.15rem; margin-bottom: .85rem; }
 .research-list { margin: 0; padding: 0; list-style: none; border-left: 2px solid #c9d9ef; }
 .research-list li { padding: .25rem 0 .25rem 1.05rem; margin: .2rem 0; }
@@ -220,8 +227,15 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <section class="about" id="about" aria-labelledby="about-heading">
         <h2 id="about-heading"><span data-lang="en">About me</span><span data-lang="zh">关于我</span></h2>
         <p><span data-lang="en">I am a Ph.D. student in Computer Science and Technology at Tianjin University. My advisor is <a href="https://itlab.tju.edu.cn/info/1037/1023.htm">Prof. Xuewei Li</a>.</span><span data-lang="zh">我目前在天津大学攻读计算机科学与技术博士学位。我的导师是<a href="https://itlab.tju.edu.cn/info/1037/1023.htm">李雪威教授</a>。</span></p>
-<p><span data-lang="en">My research spans large models and computer vision. For large models, I study mixture-of-experts routing, sparse computation, reasoning budgets, and reinforcement learning with verifiable rewards. In vision, I work on weakly supervised semantic segmentation, unsupervised domain adaptation, medical image analysis, and multimodal visual understanding.</span><span data-lang="zh">我的研究涵盖大模型与计算机视觉。大模型方面，我关注混合专家路由、稀疏计算、推理预算分配和可验证奖励强化学习。视觉方面，我关注弱监督语义分割、无监督域适应、医学图像分析和多模态视觉理解。</span></p>
+<p><span data-lang="en">My research focuses on conditional computation in large models. I study how to allocate a limited compute budget across experts and network layers. MaxScore addresses token routing in mixture-of-experts models, while X-MoD explores sparse depth routing and its scaling laws. I also work on efficient inference and multimodal visual understanding.</span><span data-lang="zh">我主要研究大模型中的条件计算，关注如何在有限算力预算下，将计算分配给合适的专家和网络层。MaxScore 研究混合专家模型中的 token 路由，X-MoD 探索稀疏深度路由及其缩放规律。我也关注高效推理和多模态视觉理解。</span></p>
 <p><span data-lang="en">I also serve as a reviewer for conferences including ICASSP, CVPR, and ICLR.</span><span data-lang="zh">我也担任 ICASSP、CVPR 和 ICLR 等学术会议的审稿人。</span></p>
+        <div class="featured-works" role="group" aria-labelledby="featured-works-heading">
+          <h3 id="featured-works-heading"><span data-lang="en">Selected works</span><span data-lang="zh">代表作</span></h3>
+          <div class="featured-links">
+            <a href="#maxscore2025"><strong>MaxScore</strong><span data-lang="en">MoE expert routing</span><span data-lang="zh">MoE 专家路由</span></a>
+            <a href="#xmod2026"><strong>X-MoD</strong><span data-lang="en">Sparse depth routing</span><span data-lang="zh">稀疏深度路由</span></a>
+          </div>
+        </div>
       </section>
       <aside class="profile" aria-label="Researcher profile">
       <img class="portrait" src="assets/portrait.jpg" width="183" height="256" alt="Portrait of Yilong Fan" fetchpriority="high">
