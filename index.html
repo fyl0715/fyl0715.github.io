@@ -4,346 +4,576 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Yilong Fan at Tianjin University. Research in deep learning, computer vision and large language models. Publications and research interests.">
-  <meta name="theme-color" content="#174e69">
+  <meta name="theme-color" content="#152e37">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Yilong Fan | Tianjin University">
   <meta property="og:description" content="Yilong Fan at Tianjin University. Research in deep learning, computer vision and large language models. Publications and research interests.">
   <meta property="og:url" content="https://fyl0715.github.io/">
   <meta property="og:image" content="https://fyl0715.github.io/assets/portrait.jpg">
   <link rel="canonical" href="https://fyl0715.github.io/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23174e69'/%3E%3Ctext x='32' y='43' font-size='33' text-anchor='middle' fill='white' font-family='Georgia'%3EYF%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%23152e37'/%3E%3Ctext x='32' y='43' font-size='33' text-anchor='middle' fill='white' font-family='Georgia'%3EYF%3C/text%3E%3C/svg%3E">
   <title>Yilong Fan | Tianjin University</title>
   <style>:root {
   color-scheme: light;
-  --ink: #182435;
-  --muted: #536276;
-  --blue: #2459a9;
-  --soft: #f3f6fa;
-  --line: #e1e7ee;
-  --paper: #fff;
+  --paper: #faf9f5;
+  --ink: #162c38;
+  --muted: #4c585c;
+  --accent: #873e3c;
+  --line: #d8d7ce;
+  --soft: #f1eee7;
+  --night: #142e37;
+  --ivory: #fff7ea;
+  --copper: #f2b89c;
+  --display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Songti SC", "Noto Serif CJK SC", serif;
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --measure: 68.5rem;
+  --gutter: clamp(1.25rem, 5.3vw, 4.5rem);
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
-body { margin: 0; color: var(--ink); background: var(--paper); font: 1.0625rem/1.75 var(--font); -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; scroll-padding-top: 1.25rem; }
+body { margin: 0; font: 1rem/1.6 var(--font); color: var(--ink); background: var(--paper); -webkit-font-smoothing: antialiased; }
 html[lang="en"] [data-lang="zh"], html[lang="zh-CN"] [data-lang="en"], [hidden] { display: none !important; }
-a { color: var(--blue); text-decoration-thickness: .06em; text-underline-offset: .2em; }
-a:hover { text-decoration: underline; }
-button, input, select { font: inherit; }
-button, select, summary { cursor: pointer; }
-a, button, summary, input, select { -webkit-tap-highlight-color: transparent; }
-:focus-visible { outline: 3px solid #5d8acc; outline-offset: 4px; border-radius: 3px; }
-button { color: inherit; }
-.skip-link { position: fixed; top: -5rem; left: 1rem; z-index: 10; background: var(--ink); color: white; padding: .65rem 1rem; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .18em; }
+button { color: inherit; font: inherit; cursor: pointer; }
+a, button { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid #aa5347; outline-offset: 3px; }
+.hero :focus-visible { outline-color: var(--copper); }
+.skip-link { position: fixed; top: -6rem; left: 1rem; z-index: 5; background: var(--ink); color: white; padding: .65rem 1rem; }
 .skip-link:focus { top: .5rem; }
-.site-header { border-bottom: 1px solid var(--line); background: #fff; }
-.header-inner { max-width: 1152px; padding: 1rem 2rem; margin: auto; display: flex; align-items: center; gap: 1rem; min-height: 78px; }
-.brand { color: var(--ink); font-size: 1rem; font-weight: 650; letter-spacing: -.025em; text-decoration: none; margin-right: auto; }
-.site-nav { display: flex; align-items: center; gap: 1.6rem; }
-.site-nav a { color: var(--muted); text-decoration: none; font-size: .9rem; padding: .5rem 0; }
-.site-nav a:hover { color: var(--blue); }
-.language-toggle { margin-left: 1.1rem; background: var(--soft); border: 1px solid var(--line); border-radius: 5px; min-width: 60px; min-height: 44px; font-size: .875rem; padding: .4rem .7rem; }
-.language-toggle:hover { background: #e8eef6; }
-.layout { max-width: 1152px; margin: auto; padding: 3.75rem 2rem 5rem; }
-.intro-row, .background-row { display: grid; gap: clamp(2rem, 5vw, 4.25rem); align-items: start; }
-.intro-row { grid-template-columns: minmax(0, 1fr) minmax(200px, 232px); padding-bottom: 2.5rem; }
-.background-row { grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); padding: 2rem 0 2.5rem; }
-.intro-row > *, .background-row > * { min-width: 0; }
-h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -.045em; font-size: 2.45rem; line-height: 1.2; margin: 0 0 .65rem; }
-main { min-width: 0; }
-section { scroll-margin-top: 2rem; }
-h2 { font-size: 1.65rem; line-height: 1.3; letter-spacing: -.025em; margin: 0 0 1.2rem; font-weight: 600; }
-.about p { margin: 0 0 1rem; }
-.publication { scroll-margin-top: 1rem; }
-.research h2 { font-size: 1.15rem; margin-bottom: .85rem; }
-.research-list { margin: 0; padding: 0; list-style: none; border-left: 2px solid #c9d9ef; }
-.research-list li { padding: .25rem 0 .25rem 1.05rem; margin: .2rem 0; }
-.research-list strong { font-size: .95rem; font-weight: 600; }
-.research-list p { font-size: .88rem; margin: 0; color: var(--muted); }
-.education h2 { font-size: 1.15rem; margin-bottom: 1rem; }
-.education-list { list-style: none; padding: 0; margin: 0; }
-.education-list li { border-left: 2px solid #c9d9ef; padding: 0 0 1.1rem 1.05rem; }
-.education-list li:last-child { padding-bottom: .1rem; }
-.education-heading { display: flex; flex-wrap: wrap; gap: .2rem 1.25rem; justify-content: space-between; align-items: baseline; }
-.education-heading h3 { font-size: 1rem; font-weight: 600; margin: 0; }
-.education-period { font-size: .875rem; color: var(--muted); margin: 0; font-variant-numeric: tabular-nums; }
-.education-detail { font-size: .9rem; margin: .15rem 0 0; color: var(--muted); }
-.section-heading { border-top: 1px solid var(--line); padding-top: 2rem; display: flex; gap: 1rem; align-items: baseline; justify-content: space-between; }
-.section-heading h2 { margin: 0; }
-.small-link { font-size: .85rem; white-space: nowrap; text-decoration: none; padding: .5rem 0; }
-.news { padding-bottom: 2rem; }
-.news-list { margin: .8rem 0 0; padding-inline-start: 1.25rem; }
-.news-list li + li { margin-top: .65rem; }
-.news-list time { margin-inline-end: .4rem; font-variant-numeric: tabular-nums; }
-.news-list [aria-hidden] { margin-inline-end: .3rem; }
-.publication-intro { font-size: .85rem; color: var(--muted); margin: .35rem 0 1.35rem; }
-.year-heading { display: flex; align-items: center; gap: 1rem; font-size: 1.125rem; color: var(--muted); letter-spacing: .04em; font-weight: 600; margin: 1.3rem 0 0; }
-.year-heading::after { content: ""; height: 1px; background: var(--line); flex: 1; }
-.publication { padding: 1.35rem 0 1.4rem; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
-.publication:last-child { border-bottom: 0; }
-.publication-row:has(.pub-figure) { display: grid; grid-template-columns: minmax(0, 32%) minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 4rem); align-items: center; }
-.publication-copy { min-width: 0; }
-.pub-figure { margin: 0; }
-.pub-link-separator { color: var(--muted); }
-.pub-meta .venue-label { font-style: italic; color: inherit; font-weight: 500; }
-.figure-link { display: block; cursor: zoom-in; }
-.figure-link img { display: block; width: 100%; height: auto; }
-.pub-figure figcaption { margin-top: .35rem; font-size: .8rem; color: var(--muted); }
-.figure-dialog { width: min(1120px, calc(100vw - 2rem)); max-height: calc(100dvh - 2rem); border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem; color: var(--ink); background: white; }
-.figure-dialog::backdrop { background: rgba(14, 24, 40, .76); }
-.figure-dialog-header { display: flex; align-items: start; gap: 1rem; justify-content: space-between; margin-bottom: 1rem; }
-.figure-dialog-header h2 { font-size: 1.05rem; line-height: 1.5; margin: .3rem 0; max-width: 850px; }
-.figure-dialog-header button { min-height: 44px; padding: .4rem .8rem; background: var(--soft); border: 1px solid #b6c2d0; border-radius: 5px; flex-shrink: 0; font-size: .875rem; }
-.figure-dialog>img { width: 100%; height: auto; max-height: 68dvh; object-fit: contain; display: block; }
-.figure-dialog-footer { display: flex; gap: 1rem; align-items: baseline; justify-content: space-between; margin-top: 1rem; font-size: .875rem; }
-.figure-dialog-footer p { margin: 0; }
-.figure-dialog-footer a { flex-shrink: 0; padding: .5rem 0; }
-body:has(.figure-dialog[open]) { overflow: hidden; }
-.pub-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem; font-size: .8rem; color: var(--muted); margin: 0 0 .45rem; }
-.venue-label { font-weight: 650; color: var(--blue); }
-.meta-separator { color: #8996a6; }
-.publication h3 { font-size: 1.08rem; line-height: 1.55; letter-spacing: -.015em; font-weight: 600; margin: 0 0 .5rem; }
-.publication h3 a { color: var(--ink); text-decoration: none; }
-.publication h3 a:hover { color: var(--blue); }
-.authors { color: var(--muted); font-size: .88rem; line-height: 1.75; margin: 0 0 .3rem; }
-.authors strong { color: var(--ink); font-weight: 650; }
-.equal-note { font-size: .78rem; color: var(--muted); margin: 0 0 .3rem; }
-.pub-links { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; font-size: .82rem; }
-.pub-summary { margin: .35rem 0 0; font-size: .95rem; line-height: 1.6; color: var(--ink); }
-.pub-links>a, .pub-links>button { display: inline-flex; align-items: center; min-height: 44px; padding: .3rem 0; text-decoration: none; }
-.pub-links>a:hover { text-decoration: underline; }
-.bib-button { background: none; border: 0; color: var(--blue); }
-.bib-button:hover { text-decoration: underline; }
-.bib-panel { background: var(--soft); border-radius: 5px; border: 1px solid var(--line); padding: .8rem 1rem; margin-top: .4rem; }
-.bib-panel pre { font: .75rem/1.7 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-x: auto; white-space: pre-wrap; word-break: break-word; margin: .4rem 0; }
-.bib-actions { display: flex; align-items: center; gap: 1rem; font-size: .8rem; }
-.copy-button { background: #fff; color: var(--blue); border: 1px solid #b6c2d0; border-radius: 4px; padding: .35rem .7rem; min-height: 44px; }
-.site-footer { max-width: 1152px; margin: 0 auto; padding: 1.5rem 2rem 2rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between; color: var(--muted); font-size: .8rem; }
-.site-footer p { margin: 0; }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
-@media (min-width: 1500px) { .layout { padding-top: 4.5rem; } }
-@media (max-width: 960px) { h1 { font-size: 2.2rem; } .site-nav { gap: 1.1rem; } }
-@media (max-width: 720px) {
-  html { scroll-padding-top: 1rem; }
-  .header-inner { padding: .7rem 1.25rem; min-height: 68px; gap: .5rem; }
-  .site-nav { gap: 1rem; }
-  .site-nav a { font-size: .82rem; }
-  .publication-row:has(.pub-figure) { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
-  .site-nav .research-nav, .site-nav .education-nav { display: none; }
-  .language-toggle { margin-left: .25rem; min-width: 54px; }
-  .layout { display: block; padding: 2rem 1.25rem 3rem; }
-  .intro-row, .background-row { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; padding-bottom: 1.75rem; }
-  h1 { font-size: 2rem; margin-top: .15rem; }
-  h2 { font-size: 1.5rem; }
-  .section-heading { padding-top: 1.6rem; }
-  .site-footer { padding: 1.25rem; }
-  .figure-dialog { padding: .85rem; }
-  .figure-dialog-footer { display: block; }
+.sr-only { position: absolute; height: 1px; width: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.header-inner, .intro-row, .layout, .site-footer { width: min(calc(100% - 2 * var(--gutter)), var(--measure)); margin-inline: auto; }
+.header-inner { min-height: 4.4rem; display: flex; align-items: center; gap: 1.6rem; }
+.brand { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; margin-inline-end: auto; color: var(--ink); text-decoration: none; font: italic 600 2.25rem/1 var(--display); letter-spacing: -.095em; }
+.brand-stop { color: var(--accent); }
+.site-nav, #section-nav { display: flex; align-items: center; gap: clamp(.9rem, 2.2vw, 2rem); }
+.site-nav { position: relative; }
+.site-nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: .91rem; color: var(--ink); text-decoration: none; }
+.site-nav a:hover, .language-toggle:hover { color: var(--accent); text-decoration: underline; text-underline-offset: .3em; }
+.language-toggle { flex: none; min-height: 44px; min-width: 44px; border: 0; background: transparent; font-size: .86rem; }
+.language-toggle::before { content: ""; border-left: 1px solid #c5c4bb; margin-right: 1.3rem; }
+.menu-toggle { display: none; }
+.hero { position: relative; isolation: isolate; overflow: hidden; background: var(--night); color: var(--ivory); }
+.contours { position: absolute; z-index: -1; inset: 0 0 0 auto; width: min(48%, 55rem); height: 100%; pointer-events: none; mask-image: linear-gradient(90deg, transparent 3%, black 32%); }
+.intro-row { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, .85fr); grid-template-areas: "heading photo" "text photo" "links photo"; gap: 0 clamp(2rem, 6vw, 6.5rem); align-content: center; padding-block: clamp(2.5rem, 4vw, 4rem) clamp(1.7rem, 3.3vw, 3.1rem); }
+.intro-heading { grid-area: heading; min-width: 0; }
+.discipline { margin: 0 0 .8rem; display: flex; align-items: center; gap: .72rem; color: var(--copper); font-size: .76rem; font-weight: 620; line-height: 1.4; letter-spacing: .14em; text-transform: uppercase; }
+.discipline::before { content: ""; width: 1.85rem; border-top: 1px solid currentColor; }
+h1 { margin: 0; font: 400 clamp(4.75rem, 7.55vw, 7rem)/1 var(--display); letter-spacing: -.055em; }
+h1 em { font-weight: inherit; }
+.intro-text { grid-area: text; max-width: 41rem; }
+.intro-text p { margin: 0; text-wrap: pretty; }
+.intro-text .about-affiliation { margin-top: .95rem; color: #f1eae0; font-size: clamp(1.04rem, 1.38vw, 1.2rem); line-height: 1.5; }
+.about-affiliation a { white-space: nowrap; color: inherit; text-decoration-color: var(--copper); }
+.about-affiliation a:hover { color: var(--copper); }
+.intro-text .about-focus { margin-top: .9rem; font-size: clamp(1rem, 1.35vw, 1.125rem); line-height: 1.6; color: #e1e8e6; }
+.intro-text .about-detail { margin-top: .65rem; color: #bfcecc; font-size: .94rem; }
+.profile-links { grid-area: links; display: flex; align-items: center; flex-wrap: wrap; list-style: none; padding: 0; margin: .95rem 0 0; gap: 0 1.35rem; }
+.profile-links a { display: inline-flex; align-items: center; justify-content: center; }
+.profile-links a { gap: .48rem; min-height: 44px; color: var(--ivory); text-decoration: none; font-size: .9rem; font-weight: 500; }
+.profile-links a:hover { text-decoration: underline; color: var(--copper); }
+.profile-links svg, .menu-toggle svg { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; }
+.profile-links svg { color: var(--copper); }
+.portrait-plate { grid-area: photo; margin: 0; align-self: center; justify-self: center; width: clamp(9rem, 14vw, 12rem); color: var(--ivory); }
+.portrait { display: block; width: 100%; height: auto; border: 6px solid #f7f3ea; box-shadow: 0 12px 34px #07171e3d; }
+.portrait-plate figcaption { display: flex; align-items: center; gap: .55rem; margin-top: .7rem; font: italic 1.05rem/1.3 var(--display); color: #eee6d9; }
+.portrait-plate figcaption::before { content: ""; width: 1.25rem; border-top: 1px solid var(--copper); }
+html[lang="zh-CN"] .portrait-plate figcaption { font-style: normal; font-size: .93rem; }
+.layout { padding-bottom: 3rem; }
+.site-footer { padding: 1.2rem 0 2rem; }
+.menu-close { display: none; }
+.menu-toggle[aria-expanded="true"] .menu-open { display: none; }
+.menu-toggle[aria-expanded="true"] .menu-close { display: block; }
+@media (max-width: 46rem) {
+  :root { --gutter: clamp(1.2rem, 5.4vw, 2.1rem); }
+  .header-inner { min-height: 3.55rem; gap: .6rem; }
+  .brand { font-size: 1.95rem; }
+  .site-nav, #section-nav { gap: .9rem; }
+  .site-nav a { font-size: .88rem; }
+  .language-toggle { margin-left: .15rem; padding: 0; }
+  .language-toggle::before { margin-right: .55rem; }
+  .menu-toggle:not([hidden]) { display: inline-grid; place-items: center; background: transparent; border: 0; padding: 0; min-width: 44px; min-height: 44px; }
+  .menu-toggle[aria-expanded="false"]:not([hidden]) + #section-nav { display: none; }
+  .menu-toggle[aria-expanded="true"] + #section-nav { position: absolute; top: calc(100% + 3px); left: 0; z-index: 2; width: max-content; min-width: 9rem; padding: .35rem .9rem; display: grid; gap: 0; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 7px 18px #142e371c; }
+  .site-nav:has(.menu-toggle[hidden]) { flex-wrap: wrap; gap: 0 .7rem; }
+  .site-nav:has(.menu-toggle[hidden]) #section-nav { flex-wrap: wrap; gap: 0 .7rem; }
+  .intro-row { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "heading photo" "text text" "links links"; column-gap: clamp(.65rem, 3vw, 1.5rem); padding: 1.8rem 0 1.15rem; }
+  .intro-heading { align-self: center; }
+  .discipline { font-size: .71rem; line-height: 1.5; letter-spacing: .1em; max-width: 17rem; margin-bottom: .65rem; }
+  .discipline::before { width: 1.2rem; flex: none; }
+  h1 { font-size: clamp(3rem, 8.3vw, 4.7rem); }
+  .portrait-plate { width: clamp(4.4rem, 19vw, 7.6rem); }
+  .portrait { border-width: 3px; }
+  .portrait-plate figcaption { font-size: .78rem; margin-top: .28rem; display: block; text-align: center; }
+  html[lang="zh-CN"] .portrait-plate figcaption { font-size: .76rem; }
+  .portrait-plate figcaption::before { display: none; }
+  .contours { width: 48%; max-height: 12rem; opacity: .65; mask-image: linear-gradient(180deg, black 58%, transparent 100%); }
+  .portrait-plate figcaption { white-space: nowrap; width: max-content; position: relative; left: 50%; transform: translateX(-50%); }
+  .intro-text .about-affiliation { margin-top: 1.15rem; }
+  .intro-text .about-focus { margin-top: .68rem; }
+  .intro-text .about-detail { font-size: .875rem; }
+  .profile-links { margin-top: .65rem; column-gap: .85rem; }
+  .scholar-prefix { display: none; }
+  .profile-links a { font-size: .88rem; }
 }
-@media (max-width: 410px) {
-  .brand { font-size: .9rem; }
-  .site-nav { gap: .7rem; }
-  .site-nav .about-nav { display: none; }
-  h1 { font-size: 1.85rem; }
-  .section-heading { flex-wrap: wrap; gap: 0 .5rem; }
+@media (max-width: 24rem) {
+  .header-inner { gap: .3rem; }
+  .site-nav { gap: .6rem; }
+  .discipline::before { display: none; }
+  .discipline { font-size: .7rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media print {
-  .site-header, .bib-button, .bib-panel, .skip-link, .small-link { display: none !important; }
-  .layout { padding: 0; }
-  .publication { break-inside: avoid; }
-  .figure-dialog { display: none !important; }
-  a { color: inherit; }
-  body { font-size: 10pt; }
-  .site-footer { padding: 1rem 0; }
+  body { font-size: 10pt; background: white; }
+  .header-inner, .contours, .skip-link { display: none; }
+  .intro-row, .layout, .site-footer { width: 100%; }
+  .hero { --ivory: black; --copper: black; background: white; color: black; }
+  .hero p, .hero svg, .portrait-plate figcaption { color: black !important; }
+  .intro-row { padding: 0 0 1rem; }
+  .portrait-plate { width: 6rem; }
+  .portrait { box-shadow: none; }
+}
+/* The background, news feed, and bibliography share a single reading grid. */
+.background-row,
+.news,
+#publications {
+  min-width: 0;
 }
 
-/* Match the visual hierarchy across the introduction and publication list. */
-:root {
-  --blue: #174e69;
-  --soft: #edf4f6;
-  --line: #dfe7eb;
-}
-.brand { font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; }
-.layout { padding-top: clamp(2rem, 4vw, 3.5rem); }
-.intro-row {
-  grid-template-columns: minmax(0, 1fr) minmax(255px, 288px);
-  align-items: start;
-  column-gap: clamp(2rem, 5vw, 4rem);
-  row-gap: 1.65rem;
-}
-.about { padding-block: .3rem; }
-.about h1 { color: #143447; font-size: clamp(2.7rem, 5vw, 4.35rem); margin-bottom: .75rem; }
-.about p { max-width: 65ch; }
-.about .about-affiliation, .about .about-detail { color: var(--muted); }
-.about .about-focus { border-inline-start: 2px solid #8eb4c3; padding-inline-start: .85rem; font-size: clamp(1.08rem, 1.65vw, 1.22rem); line-height: 1.65; }
-.about .about-detail { margin-bottom: 0; font-size: .95rem; }
-.profile {
-  padding: 1rem 1.15rem;
-  background: #f4f8f9;
-  border: 1px solid var(--line);
-  border-radius: .9rem;
-}
-.profile-identity {
+.background-row {
   display: grid;
-  grid-template-columns: 88px minmax(0, 1fr);
-  align-items: center;
-  gap: .85rem;
-  padding: .2rem 0 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(2.5rem, 7vw, 6rem);
+  border-top: 1px solid var(--line, #d8d5ca);
+  padding: clamp(2rem, 4vw, 3.5rem) 0;
 }
-.portrait {
+
+.background-row > *,
+.publication-copy {
+  min-width: 0;
+}
+
+.education h2,
+.research h2,
+.section-heading h2 {
+  margin: 0;
+  color: var(--ink, #162c38);
+  font-family: var(--display, Georgia, "Songti SC", "Noto Serif CJK SC", serif);
+  font-weight: 500;
+  font-size: clamp(1.85rem, 3.1vw, 2.55rem);
+  line-height: 1.14;
+  letter-spacing: -.042em;
+}
+
+.education-list,
+.research-list,
+.news-list {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.education-list li,
+.research-list li {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--line, #d8d5ca);
+  padding: .78rem 0 .81rem;
+}
+
+.education-list li:last-child,
+.research-list li:last-child {
+  padding-bottom: 0;
+}
+
+.education-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .15rem .75rem;
+}
+
+.education-heading h3,
+.research-list strong {
+  margin: 0;
+  color: var(--ink, #162c38);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 630;
+  line-height: 1.4;
+  letter-spacing: -.015em;
+}
+
+.education-period,
+.news-list time {
+  color: var(--accent, #873e3c);
+  font-size: .875rem;
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 1.55;
+  white-space: nowrap;
+}
+
+.education-period { margin: 0; }
+
+.education-detail,
+.research-list p {
+  margin: .18rem 0 0;
+  color: var(--muted, #48545b);
+  font-size: .9375rem;
+  line-height: 1.55;
+}
+
+.education-separator { margin-inline: .13em; }
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .35rem 1.2rem;
+  border: 0;
+  padding: 0;
+}
+
+.news {
+  display: grid;
+  grid-template-columns: minmax(8rem, .24fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  padding: clamp(2rem, 4vw, 3.25rem) 0;
+  border-top: 1px solid var(--line, #d8d5ca);
+}
+
+.news-list { margin: 0; }
+
+.news-list li {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  align-items: baseline;
+  gap: .75rem;
+  margin: 0;
+  padding: .62rem 0;
+  border: 0;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.news-list li + li {
+  margin: 0;
+  border-top: 1px solid var(--line, #d8d5ca);
+}
+
+.news-list li:first-child { padding-top: .12rem; }
+.news-list li:last-child { padding-bottom: 0; }
+.news-list time { margin-inline-end: 0; }
+
+.news-copy { overflow-wrap: anywhere; }
+.news-copy > [aria-hidden] { margin-inline-end: .16rem; font-size: .86em; }
+.news-copy a, .site-footer a { color: var(--accent, #873e3c); text-decoration-thickness: 1px; text-underline-offset: .18em; }
+.news-copy a:hover, .site-footer a:hover { color: var(--ink, #162c38); }
+
+#publications {
+  border-top: 1px solid var(--line, #d8d5ca);
+  padding-top: clamp(2.1rem, 4vw, 3.5rem);
+}
+
+#publications .section-heading h2 { font-size: clamp(2.6rem, 5.2vw, 4.2rem); }
+
+.small-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: .25rem 0;
+  border: 0;
+  border-radius: 0;
+  color: var(--accent, #873e3c);
+  font-weight: 580;
+  font-size: .875rem;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .28em;
+}
+.small-link:hover { color: var(--ink, #162c38); background: transparent; }
+
+.publication-intro {
+  margin: .45rem 0 clamp(1.6rem, 3.5vw, 2.5rem);
+  color: var(--muted, #48545b);
+  font-size: .9375rem;
+  line-height: 1.6;
+}
+
+.publication-year {
+  border-top: 1px solid var(--ink, #162c38);
+  padding-top: 1.15rem;
+}
+
+.publication-year + .publication-year { margin-top: clamp(1.5rem, 3vw, 2.75rem); }
+
+.year-heading {
+  display: block;
+  margin: 0 0 .8rem;
+  color: var(--accent, #873e3c);
+  font: 400 clamp(2.15rem, 3.8vw, 3.5rem)/1.05 var(--display, Georgia, "Songti SC", serif);
+  letter-spacing: -.055em;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+.year-heading::after { content: none; }
+
+.publication {
+  padding: clamp(1.45rem, 3vw, 2.1rem) 0;
+  min-width: 0;
+  border: 0;
+  border-bottom: 1px solid var(--line, #d8d5ca);
+  overflow-wrap: anywhere;
+}
+
+.publication-year .publication:first-of-type { padding-top: .36rem; }
+.publication:last-child { padding-bottom: 0; border-bottom: 0; }
+
+.publication-row:has(.pub-figure) {
+  display: grid;
+  grid-template-columns: minmax(0, 30%) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.6rem, 3.5vw, 3.25rem);
+}
+
+.publication-copy { grid-row: auto; }
+.pub-figure { margin: 0; }
+
+.figure-link {
+  display: block;
+  cursor: zoom-in;
+}
+
+.figure-link img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center 30%;
-  border-radius: .65rem;
-  background: var(--paper);
+  mix-blend-mode: multiply;
 }
-.profile-name { display: none; }
-.affiliation { font-weight: 650; margin: 0; font-size: .95rem; line-height: 1.35; }
-.location { color: var(--muted); margin: .3rem 0 0; font-size: .86rem; line-height: 1.45; }
-.profile-links { display: grid; list-style: none; margin: 0; padding: .5rem 0 0; border-top: 1px solid var(--line); }
-.profile-links a {
+
+.pub-figure figcaption,
+.equal-note {
+  margin: .25rem 0;
+  color: var(--muted, #48545b);
+  font-size: .8125rem;
+  line-height: 1.45;
+}
+
+.publication h3 {
+  margin: 0 0 .42rem;
+  font: 550 clamp(1.18rem, 2vw, 1.5rem)/1.28 var(--display, Georgia, "Songti SC", serif);
+  letter-spacing: -.021em;
+  text-wrap: pretty;
+}
+
+.publication h3 a { color: var(--ink, #162c38); text-decoration: none; }
+.publication h3 a:hover { color: var(--accent, #873e3c); text-decoration: underline; text-decoration-thickness: 1px; }
+
+.authors {
+  margin: 0 0 .28rem;
+  color: var(--muted, #48545b);
+  font-size: .94rem;
+  line-height: 1.55;
+}
+.authors strong { color: var(--ink, #162c38); font-weight: 650; }
+
+.pub-meta {
   display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin: .25rem 0 0;
+  color: var(--muted, #48545b);
+  font-size: .875rem;
+  line-height: 1.55;
+}
+.pub-meta .venue-label { color: var(--ink, #162c38); font-weight: 650; font-style: normal; }
+.meta-separator, .pub-link-separator { color: var(--muted, #48545b); }
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: .62rem;
-  min-height: 44px;
-  padding: .3rem .15rem;
-  border-radius: .4rem;
+  gap: 0 .56rem;
   font-size: .9rem;
-  line-height: 1.4;
-  text-decoration: none;
-  overflow-wrap: anywhere;
 }
-.profile-links a:hover { background: var(--soft); text-decoration: underline; }
-.profile-icon {
-  display: grid;
-  place-items: center;
-  flex: 0 0 30px;
-  width: 30px;
-  height: 30px;
-  border-radius: .4rem;
-  background: #e5eff2;
+.pub-links > a, .pub-links > button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin: 0;
+  padding: .2rem 0;
+  background: none;
+  border: 0;
+  color: var(--accent, #873e3c);
+  font: inherit;
+  font-weight: 570;
+  text-decoration: underline;
+  text-underline-offset: .22em;
+  text-decoration-thickness: 1px;
 }
-.profile-icon svg {
-  width: 18px;
-  height: 18px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.65;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.pub-links > a:hover, .pub-links > button:hover { color: var(--ink, #162c38); }
+
+.pub-summary {
+  max-width: 70ch;
+  margin: 0;
+  color: var(--muted, #48545b);
+  font-size: 1rem;
+  line-height: 1.58;
 }
-.background-row { gap: clamp(2rem, 5vw, 4rem); }
-.education h2, .research h2, .section-heading h2 { font-size: clamp(1.35rem, 2.1vw, 1.65rem); }
-.news-list { list-style: none; padding: 0; margin-top: .9rem; }
-.news-list li { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); align-items: baseline; gap: .85rem; border-bottom: 1px solid var(--line); padding: .7rem 0; }
-.news-list li + li { margin-top: 0; }
-.news-list time { color: var(--muted); font-size: .9rem; margin: 0; white-space: nowrap; }
-.news-list a:hover { color: var(--ink); }
-.year-heading { color: var(--blue); font-size: 1.3rem; font-variant-numeric: tabular-nums; margin-top: 1.8rem; }
-.publication-year + .publication-year { margin-top: .65rem; }
-.publication { padding-block: 1.55rem; }
-.publication-row:has(.pub-figure) { grid-template-columns: minmax(0, 31%) minmax(0, 1fr); gap: clamp(1.5rem, 3vw, 2.25rem); align-items: start; }
-.publication h3 { font-size: clamp(1.05rem, 1.6vw, 1.22rem); line-height: 1.4; }
-.pub-links { gap: .55rem; font-size: .9rem; }
-.pub-links > a, .pub-links > button { min-height: 44px; }
-.pub-summary { color: var(--muted); max-width: 72ch; }
-.pub-meta { font-size: .875rem; }
-.small-link { display: inline-flex; align-items: center; min-height: 44px; padding: .45rem .8rem; border: 1px solid var(--line); border-radius: .45rem; }
-.small-link:hover { background: var(--soft); }
-.publication:target { background: var(--soft); outline: .55rem solid var(--soft); border-radius: .3rem; }
-@media (max-width: 720px) {
-  .layout { padding-top: 1.5rem; }
-  .intro-row, .publication-row:has(.pub-figure) { grid-template-columns: minmax(0, 1fr); gap: 1.05rem; }
-  .intro-row .profile { grid-row: 1; padding: .85rem .95rem; }
-  .profile-identity { grid-template-columns: 72px minmax(0, 1fr); gap: .8rem; padding-bottom: .75rem; }
-  .profile-name { display: block; margin: 0 0 .2rem; font: 1.7rem/1.2 Georgia, "Times New Roman", serif; }
-  .profile-links { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); column-gap: .65rem; }
-  .profile-links a { font-size: .85rem; gap: .45rem; }
-  .profile-email { grid-column: 1 / -1; }
-  .about h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-  .header-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 .5rem; }
-  .site-nav { grid-column: 1 / -1; grid-row: 2; flex-wrap: wrap; gap: 0 .65rem; }
-  .site-nav a { white-space: nowrap; display: inline-flex; align-items: center; min-height: 44px; }
-  .site-nav .about-nav, .site-nav .research-nav, .site-nav .education-nav { display: inline-flex; }
+
+.publication:target {
+  background: transparent;
+  outline: 0;
+}
+.publication:target h3 a { text-decoration: underline; text-decoration-color: var(--accent, #873e3c); text-underline-offset: .15em; }
+
+.bib-panel {
+  min-width: 0;
+  margin-top: 1.2rem;
+  padding: .8rem 1rem;
+  border: 1px solid var(--line, #d8d5ca);
+  border-radius: 2px;
+  background: var(--soft, #f2eee8);
+}
+.bib-actions { display: flex; align-items: center; gap: 1rem; font-size: .875rem; }
+.bib-panel pre { overflow-x: auto; white-space: pre-wrap; overflow-wrap: anywhere; margin: .5rem 0; font: .82rem/1.6 ui-monospace, Menlo, monospace; }
+
+.figure-dialog {
+  width: min(70rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  color: var(--ink, #162c38);
+  background: var(--paper, #faf9f5);
+  border: 1px solid var(--line, #d8d5ca);
+  border-radius: 3px;
+}
+.figure-dialog::backdrop { background: rgba(17, 33, 40, .8); }
+.figure-dialog-header { display: flex; align-items: start; justify-content: space-between; gap: 1rem; margin-bottom: .85rem; }
+.figure-dialog-header h2 { margin: .2rem 0; font: 550 clamp(1.02rem, 2vw, 1.4rem)/1.3 var(--display, Georgia, serif); }
+.figure-dialog-header button, .copy-button {
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: .3rem .65rem;
+  color: var(--accent, #873e3c);
+  background: transparent;
+  border: 1px solid var(--line, #d8d5ca);
+  border-radius: 2px;
+  font-size: .875rem;
+}
+.figure-dialog > img { display: block; width: 100%; height: auto; max-height: 65dvh; object-fit: contain; }
+.figure-dialog-footer { margin-top: .8rem; }
+.figure-dialog-footer p { margin: 0; font-size: .92rem; line-height: 1.5; }
+body:has(.figure-dialog[open]) { overflow: hidden; }
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .4rem 1.5rem;
+  color: var(--muted, #48545b);
+  font-size: .86rem;
+  line-height: 1.6;
+  border-top: 1px solid var(--line, #d8d5ca);
+}
+.site-footer p { margin: 0; }
+
+@media (min-width: 70rem) {
+  .publication-year {
+    display: grid;
+    grid-template-columns: minmax(5rem, .105fr) minmax(0, 1fr);
+    gap: 0 clamp(1.5rem, 3vw, 3rem);
+    align-items: start;
+    padding-top: 1.55rem;
+  }
+  .year-heading { grid-column: 1; grid-row: 1; }
+  .publication-year .publication { grid-column: 2; }
+}
+
+@media (max-width: 42rem) {
+  .background-row { grid-template-columns: 1fr; gap: 1.85rem; padding-block: 1.85rem; }
+  .education-list, .research-list { margin-top: .9rem; }
+  .news { grid-template-columns: 1fr; gap: 1rem; padding-block: 1.85rem; }
+  .news-list li { font-size: .96rem; gap: .5rem; grid-template-columns: 4rem minmax(0, 1fr); }
+  .publication-row:has(.pub-figure) { grid-template-columns: 1fr; gap: 1rem; }
   .publication-copy { grid-row: 1; }
+  .pub-figure { width: 100%; }
+  .pub-links { column-gap: .75rem; }
   .pub-link-separator { display: none; }
-  .about p { font-size: 1rem; line-height: 1.6; margin-bottom: .7rem; }
-  .about .about-focus { font-size: 1.04rem; line-height: 1.58; }
-  .about .about-detail { font-size: .875rem; }
-  .publication { padding-block: 1.4rem; }
-  .news-list li { grid-template-columns: 4.25rem minmax(0, 1fr); gap: .55rem; font-size: .95rem; }
 }
-@media (max-width: 360px) {
-  .site-nav { justify-content: space-between; column-gap: .3rem; }
-  .site-nav a { font-size: .8rem; }
-  .profile-identity { grid-template-columns: 64px minmax(0, 1fr); }
-  .profile-links { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); column-gap: .4rem; }
+
+@media (max-width: 28rem) {
+  .education-heading { gap: .15rem .45rem; }
+  .section-heading { column-gap: .65rem; }
+  .publication-intro { margin-top: .35rem; }
+  .small-link { font-size: .82rem; }
+}
+
+@media print {
+  .news, .background-row { padding-block: 1rem; }
+  .small-link, .bib-button, .bib-panel, .figure-dialog { display: none !important; }
+  .publication { break-inside: avoid; }
 }
 </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Yilong Fan", "url": "https://fyl0715.github.io/", "affiliation": {"@type": "CollegeOrUniversity", "name": "Tianjin University"}, "sameAs": ["https://scholar.google.com/citations?user=1bKyJZQAAAAJ", "https://github.com/fyl0715"], "knowsAbout": ["Efficient large models", "Reasoning & learning", "Computer vision"]}</script>
 </head>
-<body>
+<body id="top">
   <a class="skip-link" href="#main"><span data-lang="en">Skip to content</span><span data-lang="zh">跳转到正文</span></a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#top">Yilong Fan</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a class="about-nav" href="#about"><span data-lang="en">About</span><span data-lang="zh">关于</span></a>
-        <a class="research-nav" href="#research"><span data-lang="en">Research</span><span data-lang="zh">研究</span></a>
-        <a class="education-nav" href="#education"><span data-lang="en">Education</span><span data-lang="zh">教育经历</span></a>
+      <a class="brand" href="#top" aria-label="Yilong Fan"><span aria-hidden="true">YF<span class="brand-stop">.</span></span></a>
+      <nav class="site-nav" aria-label="Main navigation" data-label-en="Main navigation" data-label-zh="主导航">
+        <button type="button" class="menu-toggle" aria-controls="section-nav" aria-expanded="false" data-enhanced hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="menu-open" d="M3 5h18M3 12h18M3 19h18"/><path class="menu-close" d="m5 5 14 14m0-14L5 19"/></svg>
+          <span class="sr-only"><span data-lang="en">Sections</span><span data-lang="zh">栏目导航</span></span>
+        </button>
+        <div id="section-nav">
+          <a href="#about"><span data-lang="en">About</span><span data-lang="zh">关于</span></a>
+          <a href="#education"><span data-lang="en">Education</span><span data-lang="zh">教育经历</span></a>
+          <a href="#research"><span data-lang="en">Research</span><span data-lang="zh">研究方向</span></a>
+        </div>
         <a href="#news"><span data-lang="en">News</span><span data-lang="zh">新闻</span></a>
         <a href="#publications"><span data-lang="en">Publications</span><span data-lang="zh">出版物</span></a>
       </nav>
       <button id="language-toggle" class="language-toggle" type="button" aria-label="切换为中文" data-enhanced hidden>中文</button>
     </div>
   </header>
-  <main class="layout" id="main">
-    <div class="intro-row" id="top">
-      <section class="about" id="about" aria-labelledby="about-heading">
-        <h1 id="about-heading">Yilong Fan</h1>
-        <p class="about-affiliation"><span data-lang="en">I am a Ph.D. student in Computer Science and Technology at Tianjin University. My advisor is <a href="https://itlab.tju.edu.cn/info/1037/1023.htm">Prof. Xuewei Li</a>.</span><span data-lang="zh">我目前在天津大学攻读计算机科学与技术博士学位。我的导师是<a href="https://itlab.tju.edu.cn/info/1037/1023.htm">李雪威教授</a>。</span></p>
-<p class="about-focus"><span data-lang="en">My research spans efficient large models, reasoning and learning, and computer vision. I study how conditional computation can make large models more efficient to train and run. I also work on model reasoning, multimodal visual understanding, and image analysis.</span><span data-lang="zh">我的研究方向包括高效大模型、推理与学习，以及计算机视觉。我关注如何通过条件计算提高大模型的训练和推理效率，也研究模型推理、多模态视觉理解与图像分析。</span></p>
-<p class="about-detail"><span data-lang="en">I also serve as a reviewer for conferences including ICASSP, CVPR, and ICLR.</span><span data-lang="zh">我也担任 ICASSP、CVPR 和 ICLR 等学术会议的审稿人。</span></p>
-      </section>
-      <aside class="profile" aria-label="Researcher profile">
-        <div class="profile-identity">
-          <img class="portrait" src="assets/portrait.jpg" width="183" height="256" alt="Portrait of Yilong Fan" fetchpriority="high">
-          <div class="profile-info">
-            <p class="profile-name" aria-hidden="true">Yilong Fan</p>
-            <p class="affiliation"><span data-lang="en">Tianjin University</span><span data-lang="zh">天津大学</span></p>
-            <p class="location"><span data-lang="en">Tianjin, China</span><span data-lang="zh">中国 · 天津</span></p>
-          </div>
+  <main id="main">
+    <section class="hero" id="about" aria-labelledby="about-heading">
+      <canvas class="contours" aria-hidden="true"></canvas>
+      <div class="intro-row">
+        <div class="intro-heading">
+          <p class="discipline"><span data-lang="en">Computer Science &amp; Technology</span><span data-lang="zh">计算机科学与技术</span></p>
+          <h1 id="about-heading">Yilong <em>Fan</em></h1>
         </div>
+        <figure class="portrait-plate">
+          <img class="portrait" src="assets/portrait.jpg" width="183" height="256" alt="Portrait of Yilong Fan" data-alt-en="Portrait of Yilong Fan" data-alt-zh="Yilong Fan 的肖像" fetchpriority="high">
+          <figcaption><span data-lang="en">Tianjin, China</span><span data-lang="zh">中国 · 天津</span></figcaption>
+        </figure>
+        <div class="intro-text"><p class="about-affiliation"><span data-lang="en">I’m a Ph.D. student at Tianjin University, advised by <a href="https://itlab.tju.edu.cn/info/1037/1023.htm">Prof. Xuewei Li</a>.</span><span data-lang="zh">我目前在天津大学攻读博士学位，导师是<a href="https://itlab.tju.edu.cn/info/1037/1023.htm">李雪威教授</a>。</span></p>
+<p class="about-focus"><span data-lang="en">I study conditional computation and reasoning in large models, with a focus on efficient training and inference. I also work on multimodal visual understanding and image analysis.</span><span data-lang="zh">我研究大模型的条件计算与推理，关注如何按需分配计算资源，提高训练和推理效率。我也研究多模态视觉理解与图像分析。</span></p>
+<p class="about-detail"><span data-lang="en">I review for ICASSP, CVPR, and ICLR.</span><span data-lang="zh">我也为 ICASSP、CVPR 和 ICLR 等会议审稿。</span></p></div>
         <ul class="profile-links">
-          <li>
-            <a href="https://scholar.google.com/citations?user=1bKyJZQAAAAJ" target="_blank" rel="noopener noreferrer">
-              <span class="profile-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m2 9 10-5 10 5-10 5-10-5Z M6 11v5c3.5 2.7 8.5 2.7 12 0v-5 M22 9v6"/></svg></span>
-              <span>Google Scholar</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/fyl0715" target="_blank" rel="noopener noreferrer">
-              <span class="profile-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-2-14-4 16"/></svg></span>
-              <span>GitHub</span>
-            </a>
-          </li>
-          <li class="profile-email">
-            <a href="mailto:fanyilong@tju.edu.cn">
-              <span class="profile-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-              <span>fanyilong@tju.edu.cn</span>
-            </a>
-          </li>
+          <li><a href="https://scholar.google.com/citations?user=1bKyJZQAAAAJ" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5-10-5Z M6 11v5c3.5 2.7 8.5 2.7 12 0v-5 M22 9v6"/></svg><span><span class="scholar-prefix">Google </span>Scholar</span>
+          </a></li>
+          <li><a href="https://github.com/fyl0715" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></svg><span>GitHub</span>
+          </a></li>
+          <li><a href="mailto:fanyilong@tju.edu.cn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>fanyilong@tju.edu.cn</span>
+          </a></li>
         </ul>
-      </aside>
-    </div>
+      </div>
+    </section>
+    <div class="layout">
     <div class="background-row">
       <section class="education" id="education" aria-labelledby="education-heading">
         <h2 id="education-heading"><span data-lang="en">Education</span><span data-lang="zh">教育经历</span></h2>
-        <ol class="education-list"><li><div class="education-heading"><h3><span data-lang="en">Tianjin University</span><span data-lang="zh">天津大学</span></h3><p class="education-period"><span data-lang="en">2024–present</span><span data-lang="zh">2024–至今</span></p></div><p class="education-detail"><span data-lang="en">Doctoral studies</span><span data-lang="zh">博士在读</span><span class="education-separator" aria-hidden="true"> · </span><span data-lang="en">Computer Science and Technology</span><span data-lang="zh">计算机科学与技术</span></p></li><li><div class="education-heading"><h3><span data-lang="en">Tianjin University</span><span data-lang="zh">天津大学</span></h3><p class="education-period"><span data-lang="en">2022–2024</span><span data-lang="zh">2022–2024</span></p></div><p class="education-detail"><span data-lang="en">Master’s degree</span><span data-lang="zh">硕士</span><span class="education-separator" aria-hidden="true"> · </span><span data-lang="en">Computer Science and Technology</span><span data-lang="zh">计算机科学与技术</span></p></li><li><div class="education-heading"><h3><span data-lang="en">Tianjin University</span><span data-lang="zh">天津大学</span></h3><p class="education-period"><span data-lang="en">2018–2022</span><span data-lang="zh">2018–2022</span></p></div><p class="education-detail"><span data-lang="en">Bachelor’s degree</span><span data-lang="zh">本科</span><span class="education-separator" aria-hidden="true"> · </span><span data-lang="en">Computer Science and Technology</span><span data-lang="zh">计算机科学与技术</span></p></li></ol>
+        <ol class="education-list"><li><div class="education-heading"><h3><span data-lang="en">Doctoral studies</span><span data-lang="zh">博士在读</span></h3><p class="education-period"><span data-lang="en">2024–present</span><span data-lang="zh">2024–至今</span></p></div><p class="education-detail"><span data-lang="en">Tianjin University</span><span data-lang="zh">天津大学</span><span class="education-separator" aria-hidden="true"> · </span><span data-lang="en">Computer Science and Technology</span><span data-lang="zh">计算机科学与技术</span></p></li><li><div class="education-heading"><h3><span data-lang="en">Master’s degree</span><span data-lang="zh">硕士</span></h3><p class="education-period"><span data-lang="en">2022–2024</span><span data-lang="zh">2022–2024</span></p></div><p class="education-detail"><span data-lang="en">Tianjin University</span><span data-lang="zh">天津大学</span><span class="education-separator" aria-hidden="true"> · </span><span data-lang="en">Computer Science and Technology</span><span data-lang="zh">计算机科学与技术</span></p></li><li><div class="education-heading"><h3><span data-lang="en">Bachelor’s degree</span><span data-lang="zh">本科</span></h3><p class="education-period"><span data-lang="en">2018–2022</span><span data-lang="zh">2018–2022</span></p></div><p class="education-detail"><span data-lang="en">Tianjin University</span><span data-lang="zh">天津大学</span><span class="education-separator" aria-hidden="true"> · </span><span data-lang="en">Computer Science and Technology</span><span data-lang="zh">计算机科学与技术</span></p></li></ol>
       </section>
       <section class="research" id="research" aria-labelledby="research-heading">
         <h2 id="research-heading"><span data-lang="en">Research interests</span><span data-lang="zh">研究方向</span></h2>
@@ -377,7 +607,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <h3><a href="https://arxiv.org/abs/2611.20936" target="_blank" rel="noopener noreferrer">ReAccess: Look Once, Stay Focused with Efficient Test Time Memory</a></h3>
       <p class="authors">Tianhao Chen, <strong>Yilong Fan</strong>, Yuheng Wu, Xiaobin Hu, Dongman Lee</p>
       <p class="pub-meta"><span class="venue-label">arXiv:2611.20936, 2026</span><span class="meta-separator" aria-hidden="true">·</span><span data-lang="en">Preprint</span><span data-lang="zh">预印本</span></p>
-      <div class="pub-links"><a href="https://arxiv.org/abs/2611.20936" target="_blank" rel="noopener noreferrer">Paper</a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://arxiv.org/pdf/2611.20936" target="_blank" rel="noopener noreferrer">PDF</a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://github.com/ryu1ion/reaccess" target="_blank" rel="noopener noreferrer">Code</a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://ryu1ion.github.io/reaccess/" target="_blank" rel="noopener noreferrer"><span data-lang="en">Project page</span><span data-lang="zh">项目主页</span></a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-reaccess2026" data-enhanced hidden>BibTeX</button></div>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2611.20936" target="_blank" rel="noopener noreferrer"><span data-lang="en">Paper</span><span data-lang="zh">论文</span></a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://arxiv.org/pdf/2611.20936" target="_blank" rel="noopener noreferrer">PDF</a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://github.com/ryu1ion/reaccess" target="_blank" rel="noopener noreferrer"><span data-lang="en">Code</span><span data-lang="zh">代码</span></a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://ryu1ion.github.io/reaccess/" target="_blank" rel="noopener noreferrer"><span data-lang="en">Project page</span><span data-lang="zh">项目主页</span></a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-reaccess2026" data-enhanced hidden>BibTeX</button></div>
       <p class="pub-summary"><span data-lang="en">Builds a compact visual memory in a single image pass and retrieves question-relevant evidence during inference to support fine-grained visual reasoning.</span><span data-lang="zh">通过一次图像编码构建紧凑视觉记忆，并在推理时检索与问题相关的证据，支持细粒度视觉推理。</span></p>
       </div>
       </div>
@@ -406,7 +636,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <h3><a href="https://arxiv.org/abs/2610.29248" target="_blank" rel="noopener noreferrer">ER-Chord: Spatially Consistent One-Step Image Editing via Equal-Energy Reliability Redistribution</a></h3>
       <p class="authors">Peize Li, Hanzhen Zhao, Xingguo Xu, <strong>Yilong Fan</strong>, Zhen Tao, Bo Yin, Zhifei Liu, Qingdong He, Xiaobin Hu</p>
       <p class="pub-meta"><span class="venue-label">arXiv:2610.29248, 2026</span><span class="meta-separator" aria-hidden="true">·</span><span data-lang="en">Preprint</span><span data-lang="zh">预印本</span></p>
-      <div class="pub-links"><a href="https://arxiv.org/abs/2610.29248" target="_blank" rel="noopener noreferrer">Paper</a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://arxiv.org/pdf/2610.29248" target="_blank" rel="noopener noreferrer">PDF</a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://github.com/Peizeli1/ER-Chord" target="_blank" rel="noopener noreferrer"><span data-lang="en">Project page</span><span data-lang="zh">项目主页</span></a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-erchord2026" data-enhanced hidden>BibTeX</button></div>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2610.29248" target="_blank" rel="noopener noreferrer"><span data-lang="en">Paper</span><span data-lang="zh">论文</span></a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://arxiv.org/pdf/2610.29248" target="_blank" rel="noopener noreferrer">PDF</a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://github.com/Peizeli1/ER-Chord" target="_blank" rel="noopener noreferrer"><span data-lang="en">Project page</span><span data-lang="zh">项目主页</span></a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-erchord2026" data-enhanced hidden>BibTeX</button></div>
       <p class="pub-summary"><span data-lang="en">Redistributes a fixed editing-energy budget toward spatially reliable regions, improving source preservation in one-step image editing.</span><span data-lang="zh">在总编辑能量固定的条件下，将编辑强度重新分配到可靠区域，从而在单步图像编辑中更好地保留原图。</span></p>
       </div>
       </div>
@@ -435,7 +665,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <h3><a href="https://arxiv.org/abs/2609.34212" target="_blank" rel="noopener noreferrer">X-MoD: Practical Scaling Laws for Sparse-Depth Routing Beyond Mixture-of-Depths</a></h3>
       <p class="authors">Bowen Dong<sup>*</sup>, <strong>Yilong Fan</strong><sup>*</sup>, Tengyu Pan, Yike Zhang, Zhenyu Li, Zijian Zhang, Xuewei Li, Mei Yu, Jianyong Wang</p><p class="equal-note"><span data-lang="en">* Equal contribution</span><span data-lang="zh">* 共同第一作者</span></p>
       <p class="pub-meta"><span class="venue-label">arXiv:2609.34212, 2026</span><span class="meta-separator" aria-hidden="true">·</span><span data-lang="en">Preprint</span><span data-lang="zh">预印本</span></p>
-      <div class="pub-links"><a href="https://arxiv.org/abs/2609.34212" target="_blank" rel="noopener noreferrer">Paper</a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://arxiv.org/pdf/2609.34212" target="_blank" rel="noopener noreferrer">PDF</a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-xmod2026" data-enhanced hidden>BibTeX</button></div>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2609.34212" target="_blank" rel="noopener noreferrer"><span data-lang="en">Paper</span><span data-lang="zh">论文</span></a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://arxiv.org/pdf/2609.34212" target="_blank" rel="noopener noreferrer">PDF</a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-xmod2026" data-enhanced hidden>BibTeX</button></div>
       <p class="pub-summary"><span data-lang="en">Introduces a sparse-depth architecture that decouples token sparsity from the spacing of dense layers, and derives scaling laws for choosing routing configurations under a compute budget.</span><span data-lang="zh">提出将 token 稀疏率与稠密层间隔解耦的稀疏深度架构，并建立缩放定律，指导给定算力预算下的路由配置选择。</span></p>
       </div>
       </div>
@@ -464,7 +694,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <h3><a href="https://arxiv.org/abs/2605.07686" target="_blank" rel="noopener noreferrer">The Coupling Tax: How Shared Token Budgets Undermine Visible Chain-of-Thought Under Fixed Output Limits</a></h3>
       <p class="authors">Wenhua Nie, Junlin Liu, Jianan Wu, Zijie Meng, <strong>Yilong Fan</strong>, Zhang Zijian, Haoran Zheng, Jyh-Shing Roger Jang</p>
       <p class="pub-meta"><span class="venue-label">arXiv:2605.07686, 2026</span><span class="meta-separator" aria-hidden="true">·</span><span data-lang="en">Preprint</span><span data-lang="zh">预印本</span></p>
-      <div class="pub-links"><a href="https://arxiv.org/abs/2605.07686" target="_blank" rel="noopener noreferrer">Paper</a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://arxiv.org/pdf/2605.07686" target="_blank" rel="noopener noreferrer">PDF</a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-coupling2026" data-enhanced hidden>BibTeX</button></div>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2605.07686" target="_blank" rel="noopener noreferrer"><span data-lang="en">Paper</span><span data-lang="zh">论文</span></a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://arxiv.org/pdf/2605.07686" target="_blank" rel="noopener noreferrer">PDF</a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-coupling2026" data-enhanced hidden>BibTeX</button></div>
       <p class="pub-summary"><span data-lang="en">Shows how explicit reasoning can crowd out final answers when both share a fixed token budget, and evaluates a strategy that budgets them separately.</span><span data-lang="zh">揭示显式推理与最终答案共享固定 token 预算时，推理过程可能挤占答案空间，并评估了分别分配预算的策略。</span></p>
       </div>
       </div>
@@ -493,7 +723,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <h3><a href="https://arxiv.org/abs/2605.07689" target="_blank" rel="noopener noreferrer">Gradient Starvation in Binary-Reward GRPO: Why Group-Mean Centering Fails and Why the Simplest Fix Works</a></h3>
       <p class="authors">Wenhua Nie, Jianan Wu, Junlin Liu, Ziwei Li, Zheng Lin, Zhang Zijian, <strong>Yilong Fan</strong>, Haoran Zheng, Jyh-Shing Roger Jang</p>
       <p class="pub-meta"><span class="venue-label">arXiv:2605.07689, 2026</span><span class="meta-separator" aria-hidden="true">·</span><span data-lang="en">Preprint</span><span data-lang="zh">预印本</span></p>
-      <div class="pub-links"><a href="https://arxiv.org/abs/2605.07689" target="_blank" rel="noopener noreferrer">Paper</a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://arxiv.org/pdf/2605.07689" target="_blank" rel="noopener noreferrer">PDF</a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-gradient2026" data-enhanced hidden>BibTeX</button></div>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2605.07689" target="_blank" rel="noopener noreferrer"><span data-lang="en">Paper</span><span data-lang="zh">论文</span></a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://arxiv.org/pdf/2605.07689" target="_blank" rel="noopener noreferrer">PDF</a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-gradient2026" data-enhanced hidden>BibTeX</button></div>
       <p class="pub-summary"><span data-lang="en">Explains why GRPO loses its learning signal when all responses in a group receive the same binary reward, and evaluates a fixed-reference sign advantage to address this failure.</span><span data-lang="zh">解释 GRPO 在组内响应获得相同二值奖励时为何失去学习信号，并评估了用固定参照的符号优势函数缓解这一问题的方法。</span></p>
       </div>
       </div>
@@ -522,7 +752,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <h3><a href="https://aclanthology.org/2025.findings-acl.653/" target="_blank" rel="noopener noreferrer">Maximum Score Routing For Mixture-of-Experts</a></h3>
       <p class="authors">Bowen Dong, <strong>Yilong Fan</strong>, Yutao Sun, Zhenyu Li, Tengyu Pan, Zhou Xun, Jianyong Wang</p>
       <p class="pub-meta"><span class="venue-label">Findings of ACL 2025</span><span class="meta-separator" aria-hidden="true">·</span><span data-lang="en">Conference paper</span><span data-lang="zh">会议论文</span></p>
-      <div class="pub-links"><a href="https://aclanthology.org/2025.findings-acl.653/" target="_blank" rel="noopener noreferrer">Paper</a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://aclanthology.org/2025.findings-acl.653.pdf" target="_blank" rel="noopener noreferrer">PDF</a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://github.com/dongbw18/MaxScore" target="_blank" rel="noopener noreferrer">Code</a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-maxscore2025" data-enhanced hidden>BibTeX</button></div>
+      <div class="pub-links"><a href="https://aclanthology.org/2025.findings-acl.653/" target="_blank" rel="noopener noreferrer"><span data-lang="en">Paper</span><span data-lang="zh">论文</span></a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://aclanthology.org/2025.findings-acl.653.pdf" target="_blank" rel="noopener noreferrer">PDF</a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://github.com/dongbw18/MaxScore" target="_blank" rel="noopener noreferrer"><span data-lang="en">Code</span><span data-lang="zh">代码</span></a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-maxscore2025" data-enhanced hidden>BibTeX</button></div>
       <p class="pub-summary"><span data-lang="en">Models token-to-expert assignment as a minimum-cost maximum-flow problem and combines it with SoftTopk to improve routing under expert capacity constraints.</span><span data-lang="zh">将 token 到专家的分配建模为最小费用最大流问题，并结合 SoftTopk 改善专家容量约束下的路由。</span></p>
       </div>
       </div>
@@ -551,7 +781,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <h3><a href="https://doi.org/10.3233/FAIA251082" target="_blank" rel="noopener noreferrer">Unsupervised Domain Adaptation for Semantic Segmentation with Unstable Category Feature Enhancement</a></h3>
       <p class="authors">Xuewei Li, Xueyang Liu, Jie Gao, Zijian Zhang, <strong>Yilong Fan</strong>, Mei Yu</p>
       <p class="pub-meta"><span class="venue-label">ECAI 2025</span><span class="meta-separator" aria-hidden="true">·</span><span data-lang="en">Conference paper</span><span data-lang="zh">会议论文</span></p>
-      <div class="pub-links"><a href="https://doi.org/10.3233/FAIA251082" target="_blank" rel="noopener noreferrer">Paper</a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-ucfe2025" data-enhanced hidden>BibTeX</button></div>
+      <div class="pub-links"><a href="https://doi.org/10.3233/FAIA251082" target="_blank" rel="noopener noreferrer"><span data-lang="en">Paper</span><span data-lang="zh">论文</span></a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-ucfe2025" data-enhanced hidden>BibTeX</button></div>
       <p class="pub-summary"><span data-lang="en">Dynamically identifies unstable categories and enhances their features to improve semantic segmentation across domains without target-domain labels.</span><span data-lang="zh">在无需目标域标注的条件下，动态识别不稳定类别并增强其特征，以改善跨域语义分割。</span></p>
       </div>
       </div>
@@ -580,7 +810,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <h3><a href="https://doi.org/10.1016/j.bspc.2025.107971" target="_blank" rel="noopener noreferrer">Ultrasound image segmentation of thyroid nodule via latent semantic feature co-registration</a></h3>
       <p class="authors">Xuewei Li, Yaqiao Zhu, <strong>Yilong Fan</strong>, Xi Wei, Ruixuan Zhang, Yuan Tian, Zhiqiang Liu</p>
       <p class="pub-meta"><span class="venue-label">Biomedical Signal Processing and Control, 2025</span><span class="meta-separator" aria-hidden="true">·</span><span data-lang="en">Journal article</span><span data-lang="zh">期刊论文</span></p>
-      <div class="pub-links"><a href="https://doi.org/10.1016/j.bspc.2025.107971" target="_blank" rel="noopener noreferrer">Paper</a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-ultrasound2025" data-enhanced hidden>BibTeX</button></div>
+      <div class="pub-links"><a href="https://doi.org/10.1016/j.bspc.2025.107971" target="_blank" rel="noopener noreferrer"><span data-lang="en">Paper</span><span data-lang="zh">论文</span></a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-ultrasound2025" data-enhanced hidden>BibTeX</button></div>
       <p class="pub-summary"><span data-lang="en">Registers atlas and target ultrasound images in a learned semantic feature space and fuses the aligned labels to segment thyroid nodules.</span><span data-lang="zh">在学习到的潜在语义特征空间中配准图谱与目标超声图像，并融合对齐后的标签，实现甲状腺结节分割。</span></p>
       </div>
       </div>
@@ -610,7 +840,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5335445" target="_blank" rel="noopener noreferrer">Mamba-Dfan: Mamba-Driven Dual-Branch Frequency-Domain Network for Rgb-D and Rgb-T Salient Object Detection</a></h3>
       <p class="authors">Xuewei Li, Kewei Zhang, Mei Yu, Zijian Zhang, <strong>Yilong Fan</strong>, Jie Gao</p>
       <p class="pub-meta"><span class="venue-label">SSRN, 2025</span><span class="meta-separator" aria-hidden="true">·</span><span data-lang="en">Preprint</span><span data-lang="zh">预印本</span></p>
-      <div class="pub-links"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5335445" target="_blank" rel="noopener noreferrer">Paper</a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-mambadfan2025" data-enhanced hidden>BibTeX</button></div>
+      <div class="pub-links"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5335445" target="_blank" rel="noopener noreferrer"><span data-lang="en">Paper</span><span data-lang="zh">论文</span></a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-mambadfan2025" data-enhanced hidden>BibTeX</button></div>
       <p class="pub-summary"><span data-lang="en">Uses Mamba to model low-frequency structure and high-frequency details, then adaptively fuses RGB with depth or thermal cues for salient object detection.</span><span data-lang="zh">利用 Mamba 建模低频结构与高频细节，并自适应融合 RGB 与深度或热红外信息，用于显著性目标检测。</span></p>
       </div>
       </div>
@@ -638,7 +868,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <h3><a href="https://doi.org/10.3233/FAIA240491" target="_blank" rel="noopener noreferrer">Pixel-wise Reclassification with Prototypes for Enhancing Weakly Supervised Semantic Segmentation</a></h3>
       <p class="authors">Yujie Diao, Ruiguo Yu, Xuewei Li, <strong>Yilong Fan</strong>, Zhiqiang Liu, Mei Yu, Chenhan Wang, Jie Gao</p>
       <p class="pub-meta"><span class="venue-label">ECAI 2024</span><span class="meta-separator" aria-hidden="true">·</span><span data-lang="en">Conference paper</span><span data-lang="zh">会议论文</span></p>
-      <div class="pub-links"><a href="https://doi.org/10.3233/FAIA240491" target="_blank" rel="noopener noreferrer">Paper</a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://journals.sagepub.com/doi/pdf/10.3233/FAIA240491" target="_blank" rel="noopener noreferrer">PDF</a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-pixel2024" data-enhanced hidden>BibTeX</button></div>
+      <div class="pub-links"><a href="https://doi.org/10.3233/FAIA240491" target="_blank" rel="noopener noreferrer"><span data-lang="en">Paper</span><span data-lang="zh">论文</span></a><span class="pub-link-separator" aria-hidden="true">/</span><a href="https://journals.sagepub.com/doi/pdf/10.3233/FAIA240491" target="_blank" rel="noopener noreferrer">PDF</a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-pixel2024" data-enhanced hidden>BibTeX</button></div>
       <p class="pub-summary"><span data-lang="en">Learns foreground and background prototypes to reclassify pixels in noisy pseudo-masks, improving supervision for weakly supervised semantic segmentation.</span><span data-lang="zh">学习前景和背景原型，对含噪伪掩码中的像素进行重分类，为弱监督语义分割提供更准确的监督信号。</span></p>
       </div>
       </div>
@@ -667,7 +897,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <h3><a href="https://doi.org/10.1109/ICASSP48485.2024.10447586" target="_blank" rel="noopener noreferrer">Balanced And Discriminative Contrastive Learning For Class-Imbalanced Medical Images</a></h3>
       <p class="authors">Xuewei Li, <strong>Yilong Fan</strong>, Hao Zheng, Jie Gao, Xi Wei, Mei Yu</p>
       <p class="pub-meta"><span class="venue-label">ICASSP 2024</span><span class="meta-separator" aria-hidden="true">·</span><span data-lang="en">Conference paper</span><span data-lang="zh">会议论文</span></p>
-      <div class="pub-links"><a href="https://doi.org/10.1109/ICASSP48485.2024.10447586" target="_blank" rel="noopener noreferrer">Paper</a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-bdcl2024" data-enhanced hidden>BibTeX</button></div>
+      <div class="pub-links"><a href="https://doi.org/10.1109/ICASSP48485.2024.10447586" target="_blank" rel="noopener noreferrer"><span data-lang="en">Paper</span><span data-lang="zh">论文</span></a><span class="pub-link-separator" aria-hidden="true">/</span><button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-bdcl2024" data-enhanced hidden>BibTeX</button></div>
       <p class="pub-summary"><span data-lang="en">Combines dynamic temperature learning with hard-example prototypes to learn more balanced and discriminative representations from class-imbalanced medical images.</span><span data-lang="zh">结合动态温度学习与困难样本原型，从类别不平衡的医学图像中学习更均衡、更具判别力的特征表征。</span></p>
       </div>
       </div>
@@ -685,10 +915,11 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       </div>
     </article></div></div>
       </section>
+    </div>
   </main>
   <footer class="site-footer">
     <p>© 2026 Yilong Fan</p>
-    <p><span data-lang="en">Last updated Nov 19, 2026</span><span data-lang="zh">更新于 2026-11-19</span> · <a href="https://scholar.google.com/citations?user=1bKyJZQAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></p>
+    <p><span data-lang="en">Last updated Nov 20, 2026</span><span data-lang="zh">更新于 2026-11-20</span> · <a href="https://scholar.google.com/citations?user=1bKyJZQAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></p>
   </footer>
   <dialog class="figure-dialog" id="figure-dialog" aria-labelledby="figure-dialog-title">
     <div class="figure-dialog-header">
@@ -709,8 +940,11 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
   function language() { return root.lang === 'zh-CN' ? 'zh-CN' : 'en'; }
   function setLanguage(value) {
     root.lang = value;
-    toggle.textContent = value === 'en' ? '中文' : 'English';
+    toggle.textContent = value === 'en' ? '中文' : 'EN';
     toggle.setAttribute('aria-label', value === 'en' ? '切换为中文' : 'Switch to English');
+    document.querySelectorAll('[data-label-en]').forEach(el => {
+      el.setAttribute('aria-label', value === 'en' ? el.dataset.labelEn : el.dataset.labelZh);
+    });
     const t = messages[value];
     document.querySelectorAll('.copy-button').forEach(button => { button.textContent = t.copy; });
     document.querySelectorAll('.copy-status').forEach(el => { el.textContent = ''; });
@@ -767,6 +1001,63 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       if (event.target === figureDialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) figureDialog.close();
     });
   }
+  const sectionsButton = document.querySelector('.menu-toggle');
+  const sectionLinks = document.getElementById('section-nav');
+  function closeSections() { sectionsButton.setAttribute('aria-expanded', 'false'); }
+  sectionsButton.addEventListener('click', () => {
+    sectionsButton.setAttribute('aria-expanded', String(sectionsButton.getAttribute('aria-expanded') !== 'true'));
+  });
+  document.addEventListener('click', event => {
+    if (!sectionsButton.contains(event.target)) closeSections();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && sectionsButton.getAttribute('aria-expanded') === 'true') {
+      closeSections();
+      sectionsButton.focus();
+    }
+  });
+  document.querySelector('.site-nav').addEventListener('focusout', event => {
+    if (event.relatedTarget && !sectionsButton.contains(event.relatedTarget) && !sectionLinks.contains(event.relatedTarget)) closeSections();
+  });
+
+  // A static family of contours behind the portrait, scaled in the canvas's own space.
+  const canvas = document.querySelector('.contours');
+  const context = canvas.getContext('2d');
+  function drawContours() {
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    if (!width || !height || !context) return;
+    const scale = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(width * scale);
+    canvas.height = Math.round(height * scale);
+    context.scale(scale, scale);
+    const wash = context.createLinearGradient(0, height, width, 0);
+    wash.addColorStop(0, 'rgba(167, 192, 179, 0)');
+    wash.addColorStop(.38, 'rgba(167, 192, 179, .37)');
+    wash.addColorStop(.78, 'rgba(224, 179, 143, .56)');
+    wash.addColorStop(1, 'rgba(224, 179, 143, .23)');
+    context.strokeStyle = wash;
+    context.lineWidth = .78;
+    for (let line = 0; line < 45; line++) {
+      const t = line / 44;
+      context.beginPath();
+      context.moveTo(width * (-.17 + .55 * t), height * 1.1);
+      context.bezierCurveTo(
+        width * (.13 + .25 * t), height * (.97 - .08 * t),
+        width * (.18 + .26 * t), height * (-.34 + .78 * t),
+        width * (.56 + .13 * t), height * (.26 + .41 * t)
+      );
+      context.bezierCurveTo(
+        width * (.83 + .02 * t), height * (.64 + .33 * t),
+        width * (.84 - .20 * t), height * (.13 + .43 * t),
+        width * 1.1, height * (-.14 + .56 * t)
+      );
+      context.stroke();
+    }
+  }
+  drawContours();
+  if (window.ResizeObserver) new ResizeObserver(drawContours).observe(canvas);
+  else window.addEventListener('resize', drawContours);
   let preference = 'en';
   try { if (localStorage.getItem('academic-language') === 'zh-CN') preference = 'zh-CN'; } catch { /* Use English by default. */ }
   document.querySelectorAll('[data-enhanced]').forEach(el => { el.hidden = false; });

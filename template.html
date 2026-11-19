@@ -4,70 +4,66 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="@@DESCRIPTION@@">
-  <meta name="theme-color" content="#174e69">
+  <meta name="theme-color" content="#152e37">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="@@NAME@@ | Tianjin University">
   <meta property="og:description" content="@@DESCRIPTION@@">
   <meta property="og:url" content="@@SITE_URL@@">
   <meta property="og:image" content="@@SITE_URL@@assets/portrait.jpg">
   <link rel="canonical" href="@@SITE_URL@@">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23174e69'/%3E%3Ctext x='32' y='43' font-size='33' text-anchor='middle' fill='white' font-family='Georgia'%3EYF%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%23152e37'/%3E%3Ctext x='32' y='43' font-size='33' text-anchor='middle' fill='white' font-family='Georgia'%3EYF%3C/text%3E%3C/svg%3E">
   <title>@@NAME@@ | Tianjin University</title>
   <style>@@CSS@@</style>
   <script type="application/ld+json">@@STRUCTURED_DATA@@</script>
 </head>
-<body>
+<body id="top">
   <a class="skip-link" href="#main"><span data-lang="en">Skip to content</span><span data-lang="zh">跳转到正文</span></a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#top">@@NAME@@</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a class="about-nav" href="#about"><span data-lang="en">About</span><span data-lang="zh">关于</span></a>
-        <a class="research-nav" href="#research"><span data-lang="en">Research</span><span data-lang="zh">研究</span></a>
-        <a class="education-nav" href="#education"><span data-lang="en">Education</span><span data-lang="zh">教育经历</span></a>
+      <a class="brand" href="#top" aria-label="Yilong Fan"><span aria-hidden="true">YF<span class="brand-stop">.</span></span></a>
+      <nav class="site-nav" aria-label="Main navigation" data-label-en="Main navigation" data-label-zh="主导航">
+        <button type="button" class="menu-toggle" aria-controls="section-nav" aria-expanded="false" data-enhanced hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="menu-open" d="M3 5h18M3 12h18M3 19h18"/><path class="menu-close" d="m5 5 14 14m0-14L5 19"/></svg>
+          <span class="sr-only"><span data-lang="en">Sections</span><span data-lang="zh">栏目导航</span></span>
+        </button>
+        <div id="section-nav">
+          <a href="#about"><span data-lang="en">About</span><span data-lang="zh">关于</span></a>
+          <a href="#education"><span data-lang="en">Education</span><span data-lang="zh">教育经历</span></a>
+          <a href="#research"><span data-lang="en">Research</span><span data-lang="zh">研究方向</span></a>
+        </div>
         <a href="#news"><span data-lang="en">News</span><span data-lang="zh">新闻</span></a>
         <a href="#publications"><span data-lang="en">Publications</span><span data-lang="zh">出版物</span></a>
       </nav>
       <button id="language-toggle" class="language-toggle" type="button" aria-label="切换为中文" data-enhanced hidden>中文</button>
     </div>
   </header>
-  <main class="layout" id="main">
-    <div class="intro-row" id="top">
-      <section class="about" id="about" aria-labelledby="about-heading">
-        <h1 id="about-heading">@@NAME@@</h1>
-        @@ABOUT_BLOCKS@@
-      </section>
-      <aside class="profile" aria-label="Researcher profile">
-        <div class="profile-identity">
-          <img class="portrait" src="assets/portrait.jpg" width="183" height="256" alt="Portrait of @@NAME@@" fetchpriority="high">
-          <div class="profile-info">
-            <p class="profile-name" aria-hidden="true">@@NAME@@</p>
-            <p class="affiliation">@@AFFILIATION@@</p>
-            <p class="location">@@LOCATION@@</p>
-          </div>
+  <main id="main">
+    <section class="hero" id="about" aria-labelledby="about-heading">
+      <canvas class="contours" aria-hidden="true"></canvas>
+      <div class="intro-row">
+        <div class="intro-heading">
+          <p class="discipline"><span data-lang="en">Computer Science &amp; Technology</span><span data-lang="zh">计算机科学与技术</span></p>
+          <h1 id="about-heading">@@DISPLAY_NAME@@</h1>
         </div>
+        <figure class="portrait-plate">
+          <img class="portrait" src="assets/portrait.jpg" width="183" height="256" alt="Portrait of @@NAME@@" data-alt-en="Portrait of @@NAME@@" data-alt-zh="@@NAME@@ 的肖像" fetchpriority="high">
+          <figcaption>@@LOCATION@@</figcaption>
+        </figure>
+        <div class="intro-text">@@ABOUT_BLOCKS@@</div>
         <ul class="profile-links">
-          <li>
-            <a href="@@SCHOLAR@@" target="_blank" rel="noopener noreferrer">
-              <span class="profile-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m2 9 10-5 10 5-10 5-10-5Z M6 11v5c3.5 2.7 8.5 2.7 12 0v-5 M22 9v6"/></svg></span>
-              <span>Google Scholar</span>
-            </a>
-          </li>
-          <li>
-            <a href="@@GITHUB@@" target="_blank" rel="noopener noreferrer">
-              <span class="profile-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-2-14-4 16"/></svg></span>
-              <span>GitHub</span>
-            </a>
-          </li>
-          <li class="profile-email">
-            <a href="mailto:@@EMAIL@@">
-              <span class="profile-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-              <span>@@EMAIL@@</span>
-            </a>
-          </li>
+          <li><a href="@@SCHOLAR@@" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5-10-5Z M6 11v5c3.5 2.7 8.5 2.7 12 0v-5 M22 9v6"/></svg><span><span class="scholar-prefix">Google </span>Scholar</span>
+          </a></li>
+          <li><a href="@@GITHUB@@" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></svg><span>GitHub</span>
+          </a></li>
+          <li><a href="mailto:@@EMAIL@@">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>@@EMAIL@@</span>
+          </a></li>
         </ul>
-      </aside>
-    </div>
+      </div>
+    </section>
+    <div class="layout">
     <div class="background-row">
       <section class="education" id="education" aria-labelledby="education-heading">
         <h2 id="education-heading"><span data-lang="en">Education</span><span data-lang="zh">教育经历</span></h2>
@@ -92,6 +88,7 @@
         <p class="publication-intro">@@PUBLICATION_INTRO@@</p>
         <div id="publication-list">@@PUBLICATIONS@@</div>
       </section>
+    </div>
   </main>
   <footer class="site-footer">
     <p>© @@YEAR@@ @@NAME@@</p>

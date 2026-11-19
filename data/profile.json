@@ -11,15 +11,15 @@
   "scholar": "https://scholar.google.com/citations?user=1bKyJZQAAAAJ",
   "github": "https://github.com/fyl0715",
   "siteUrl": "https://fyl0715.github.io/",
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "metrics": {
     "citations": 25,
     "hIndex": 3,
     "i10Index": 0
   },
   "about": {
-    "en": "I am a Ph.D. student in Computer Science and Technology at Tianjin University.",
-    "zh": "我目前在天津大学攻读计算机科学与技术博士学位。"
+    "en": "I’m a Ph.D. student at Tianjin University",
+    "zh": "我目前在天津大学攻读博士学位"
   },
   "research": [
     {
@@ -100,12 +100,12 @@
   "educationSource": "Provided by the profile owner on 2026-11-19.",
   "aboutDetails": [
     {
-      "zh": "我的研究方向包括高效大模型、推理与学习，以及计算机视觉。我关注如何通过条件计算提高大模型的训练和推理效率，也研究模型推理、多模态视觉理解与图像分析。",
-      "en": "My research spans efficient large models, reasoning and learning, and computer vision. I study how conditional computation can make large models more efficient to train and run. I also work on model reasoning, multimodal visual understanding, and image analysis."
+      "en": "I study conditional computation and reasoning in large models, with a focus on efficient training and inference. I also work on multimodal visual understanding and image analysis.",
+      "zh": "我研究大模型的条件计算与推理，关注如何按需分配计算资源，提高训练和推理效率。我也研究多模态视觉理解与图像分析。"
     },
     {
-      "zh": "我也担任 ICASSP、CVPR 和 ICLR 等学术会议的审稿人。",
-      "en": "I also serve as a reviewer for conferences including ICASSP, CVPR, and ICLR."
+      "en": "I review for ICASSP, CVPR, and ICLR.",
+      "zh": "我也为 ICASSP、CVPR 和 ICLR 等会议审稿。"
     }
   ],
   "advisor": {

@@ -62,8 +62,8 @@ def paper_html(p, name):
         venue = "arXiv:" + p["arxiv"]
     if p["venue"] == "SSRN preprint":
         venue = "SSRN"
-    links = [f'<a href="{e(p["url"])}" target="_blank" rel="noopener noreferrer">Paper</a>']
-    for key, label in (("pdf", "PDF"), ("code", "Code"), ("project", bilingual("Project page", "项目主页"))):
+    links = [f'<a href="{e(p["url"])}" target="_blank" rel="noopener noreferrer">{bilingual("Paper", "论文")}</a>']
+    for key, label in (("pdf", "PDF"), ("code", bilingual("Code", "代码")), ("project", bilingual("Project page", "项目主页"))):
         if p.get(key):
             links.append(f'<a href="{e(p[key])}" target="_blank" rel="noopener noreferrer">{label}</a>')
     links.append(f'<button class="bib-button" type="button" aria-expanded="false" aria-controls="bib-{e(p["id"])}" data-enhanced hidden>BibTeX</button>')
@@ -111,20 +111,20 @@ def main():
     if advisor:
         url = e(advisor["url"])
         first_paragraph = (
-            f'<span data-lang="en">{e(about["en"])} My advisor is <a href="{url}">{e(advisor["en"])}</a>.</span>'
-            f'<span data-lang="zh">{e(about["zh"])}我的导师是<a href="{url}">{e(advisor["zh"])}</a>。</span>'
+            f'<span data-lang="en">{e(about["en"])}, advised by <a href="{url}">{e(advisor["en"])}</a>.</span>'
+            f'<span data-lang="zh">{e(about["zh"])}，导师是<a href="{url}">{e(advisor["zh"])}</a>。</span>'
         )
     else:
-        first_paragraph = bilingual(**about)
+        first_paragraph = bilingual(about["en"] + ".", about["zh"] + "。")
     about_paragraphs = [f'<p class="about-affiliation">{first_paragraph}</p>']
     for index, paragraph in enumerate(profile.get("aboutDetails", [])):
         detail_class = "about-focus" if index == 0 else "about-detail"
         about_paragraphs.append(f'<p class="{detail_class}">{bilingual(**paragraph)}</p>')
     about_blocks = "\n".join(about_paragraphs)
     education = "".join(
-        '<li><div class="education-heading"><h3>' + bilingual(**item["institution"])
+        '<li><div class="education-heading"><h3>' + bilingual(**item["degree"])
         + '</h3><p class="education-period">' + bilingual(**item["period"])
-        + '</p></div><p class="education-detail">' + bilingual(**item["degree"])
+        + '</p></div><p class="education-detail">' + bilingual(**item["institution"])
         + '<span class="education-separator" aria-hidden="true"> · </span>' + bilingual(**item["major"])
         + '</p></li>' for item in profile.get("education", [])
     )
@@ -153,7 +153,10 @@ def main():
     intro_en = f'{counts["journal"]} journal article · {counts["conference"]} conference papers · {counts["preprint"]} preprints'
     intro_zh = f'{counts["journal"]} 篇期刊论文 · {counts["conference"]} 篇会议论文 · {counts["preprint"]} 篇预印本'
     schema = {"@context": "https://schema.org", "@type": "Person", "name": profile["name"], "url": profile["siteUrl"], "affiliation": {"@type": "CollegeOrUniversity", "name": profile["affiliation"]["en"]}, "sameAs": [profile["scholar"], profile["github"]], "knowsAbout": [r["en"] for r in profile["research"]]}
+    given, space, family = profile["name"].rpartition(" ")
+    display_name = f'{e(given)}{space}<em>{e(family)}</em>' if space else e(family)
     fields = {
+        "DISPLAY_NAME": display_name,
         "NAME": e(profile["name"]), "DESCRIPTION": e(profile["name"] + " at " + profile["affiliation"]["en"] + ". Research in deep learning, computer vision and large language models. Publications and research interests."),
         "EMAIL": e(profile["email"]),
         "AFFILIATION": bilingual(**profile["affiliation"]), "LOCATION": bilingual(**profile["location"]),
