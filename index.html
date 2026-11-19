@@ -202,16 +202,21 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
 .background-row { gap: clamp(2rem, 5vw, 4rem); }
 .education h2, .research h2, .section-heading h2 { font-size: clamp(1.35rem, 2.1vw, 1.65rem); }
 .news-list { list-style: none; padding: 0; margin-top: .9rem; }
-.news-list li { border-bottom: 1px solid var(--line); padding: .55rem 0; }
+.news-list li { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); align-items: baseline; gap: .85rem; border-bottom: 1px solid var(--line); padding: .7rem 0; }
 .news-list li + li { margin-top: 0; }
-.news-list time { color: var(--muted); display: inline-block; min-width: 5rem; font-size: .92rem; }
-.year-heading { color: var(--blue); }
+.news-list time { color: var(--muted); font-size: .9rem; margin: 0; white-space: nowrap; }
+.news-list a:hover { color: var(--ink); }
+.year-heading { color: var(--blue); font-size: 1.3rem; font-variant-numeric: tabular-nums; margin-top: 1.8rem; }
+.publication-year + .publication-year { margin-top: .65rem; }
 .publication { padding-block: 1.55rem; }
 .publication-row:has(.pub-figure) { grid-template-columns: minmax(0, 31%) minmax(0, 1fr); gap: clamp(1.5rem, 3vw, 2.25rem); align-items: start; }
 .publication h3 { font-size: clamp(1.05rem, 1.6vw, 1.22rem); line-height: 1.4; }
 .pub-links { gap: .55rem; font-size: .9rem; }
 .pub-links > a, .pub-links > button { min-height: 44px; }
-.pub-summary { color: var(--muted); }
+.pub-summary { color: var(--muted); max-width: 72ch; }
+.pub-meta { font-size: .875rem; }
+.small-link { display: inline-flex; align-items: center; min-height: 44px; padding: .45rem .8rem; border: 1px solid var(--line); border-radius: .45rem; }
+.small-link:hover { background: var(--soft); }
 .publication:target { background: var(--soft); outline: .55rem solid var(--soft); border-radius: .3rem; }
 @media (max-width: 720px) {
   .intro-row, .publication-row:has(.pub-figure) { grid-template-columns: minmax(0, 1fr); gap: 1.2rem; }
@@ -229,6 +234,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
   .featured-links a { padding: .65rem; }
   .about p { font-size: 1rem; line-height: 1.6; margin-bottom: .75rem; }
   .publication { padding-block: 1.4rem; }
+  .news-list li { grid-template-columns: 4.25rem minmax(0, 1fr); gap: .55rem; font-size: .95rem; }
 }
 @media (max-width: 360px) {
   .intro-row .profile { grid-template-columns: 70px minmax(0, 1fr); }
@@ -295,10 +301,10 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
         <div class="section-heading">
           <h2 id="news-heading"><span data-lang="en">News</span><span data-lang="zh">新闻</span></h2>
         </div>
-        <ul class="news-list"><li><time datetime="2025-07">07/2025</time> <span aria-hidden="true">🎉</span> <span data-lang="en">1 paper was accepted to <strong>ECAI 2025</strong> (<a href="#ucfe2025">UCFE</a>).</span><span data-lang="zh"><strong>ECAI 2025</strong> 录用 1 篇论文（<a href="#ucfe2025">UCFE</a>）。</span></li>
-<li><time datetime="2025-05">05/2025</time> <span aria-hidden="true">🎉</span> <span data-lang="en">1 paper was accepted to <strong>Findings of ACL 2025</strong> (<a href="#maxscore2025">MaxScore</a>).</span><span data-lang="zh"><strong>Findings of ACL 2025</strong> 录用 1 篇论文（<a href="#maxscore2025">MaxScore</a>）。</span></li>
-<li><time datetime="2024-07">07/2024</time> <span aria-hidden="true">🎉</span> <span data-lang="en">1 paper was accepted to <strong>ECAI 2024</strong> (<a href="#pixel2024">PtReCl</a>).</span><span data-lang="zh"><strong>ECAI 2024</strong> 录用 1 篇论文（<a href="#pixel2024">PtReCl</a>）。</span></li>
-<li><time datetime="2023-12">12/2023</time> <span aria-hidden="true">🎉</span> <span data-lang="en">1 paper was accepted to <strong>ICASSP 2024</strong> (<a href="#bdcl2024">BDCL</a>).</span><span data-lang="zh"><strong>ICASSP 2024</strong> 录用 1 篇论文（<a href="#bdcl2024">BDCL</a>）。</span></li></ul>
+        <ul class="news-list"><li><time datetime="2025-07">07/2025</time> <div class="news-copy"><span aria-hidden="true">🎉</span> <span data-lang="en">1 paper was accepted to <strong>ECAI 2025</strong> (<a href="#ucfe2025">UCFE</a>).</span><span data-lang="zh"><strong>ECAI 2025</strong> 录用 1 篇论文（<a href="#ucfe2025">UCFE</a>）。</span></div></li>
+<li><time datetime="2025-05">05/2025</time> <div class="news-copy"><span aria-hidden="true">🎉</span> <span data-lang="en">1 paper was accepted to <strong>Findings of ACL 2025</strong> (<a href="#maxscore2025">MaxScore</a>).</span><span data-lang="zh"><strong>Findings of ACL 2025</strong> 录用 1 篇论文（<a href="#maxscore2025">MaxScore</a>）。</span></div></li>
+<li><time datetime="2024-07">07/2024</time> <div class="news-copy"><span aria-hidden="true">🎉</span> <span data-lang="en">1 paper was accepted to <strong>ECAI 2024</strong> (<a href="#pixel2024">PtReCl</a>).</span><span data-lang="zh"><strong>ECAI 2024</strong> 录用 1 篇论文（<a href="#pixel2024">PtReCl</a>）。</span></div></li>
+<li><time datetime="2023-12">12/2023</time> <div class="news-copy"><span aria-hidden="true">🎉</span> <span data-lang="en">1 paper was accepted to <strong>ICASSP 2024</strong> (<a href="#bdcl2024">BDCL</a>).</span><span data-lang="zh"><strong>ICASSP 2024</strong> 录用 1 篇论文（<a href="#bdcl2024">BDCL</a>）。</span></div></li></ul>
       </section>
       <section id="publications" aria-labelledby="publications-heading">
         <div class="section-heading">

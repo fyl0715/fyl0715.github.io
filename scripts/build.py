@@ -143,9 +143,9 @@ def main():
         )
         subject = "paper was" if count == 1 else "papers were"
         news_items.append(
-            f'<li><time datetime="{e(when)}">{e(date_label)}</time> <span aria-hidden="true">🎉</span> '
+            f'<li><time datetime="{e(when)}">{e(date_label)}</time> <div class="news-copy"><span aria-hidden="true">🎉</span> '
             f'<span data-lang="en">{count} {subject} accepted to <strong>{e(venue)}</strong> ({titles}).</span>'
-            f'<span data-lang="zh"><strong>{e(venue)}</strong> 录用 {count} 篇论文（{titles}）。</span></li>'
+            f'<span data-lang="zh"><strong>{e(venue)}</strong> 录用 {count} 篇论文（{titles}）。</span></div></li>'
         )
     intro_en = f'{counts["journal"]} journal article · {counts["conference"]} conference papers · {counts["preprint"]} preprints'
     intro_zh = f'{counts["journal"]} 篇期刊论文 · {counts["conference"]} 篇会议论文 · {counts["preprint"]} 篇预印本'
