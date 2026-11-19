@@ -34,7 +34,7 @@
   <main class="layout" id="main">
     <div class="intro-row" id="top">
       <section class="about" id="about" aria-labelledby="about-heading">
-        <h2 id="about-heading"><span data-lang="en">About me</span><span data-lang="zh">关于我</span></h2>
+        <h1 id="about-heading">@@NAME@@</h1>
         @@ABOUT_BLOCKS@@
         <div class="featured-works" role="group" aria-labelledby="featured-works-heading">
           <h3 id="featured-works-heading"><span data-lang="en">Selected works</span><span data-lang="zh">代表作</span></h3>
@@ -47,7 +47,7 @@
       <aside class="profile" aria-label="Researcher profile">
       <img class="portrait" src="assets/portrait.jpg" width="183" height="256" alt="Portrait of @@NAME@@" fetchpriority="high">
       <div class="profile-info">
-        <h1>@@NAME@@</h1>
+        <p class="profile-name" aria-hidden="true">@@NAME@@</p>
         <p class="affiliation">@@AFFILIATION@@</p>
         <p class="location">@@LOCATION@@</p>
         <div class="profile-links">

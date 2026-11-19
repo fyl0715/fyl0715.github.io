@@ -100,8 +100,8 @@
   "educationSource": "Provided by the profile owner on 2026-11-19.",
   "aboutDetails": [
     {
-      "zh": "我主要研究大模型中的条件计算，关注如何在有限算力预算下，将计算分配给合适的专家和网络层。MaxScore 研究混合专家模型中的 token 路由，X-MoD 探索稀疏深度路由及其缩放规律。我也关注高效推理和多模态视觉理解。",
-      "en": "My research focuses on conditional computation in large models. I study how to allocate a limited compute budget across experts and network layers. MaxScore addresses token routing in mixture-of-experts models, while X-MoD explores sparse depth routing and its scaling laws. I also work on efficient inference and multimodal visual understanding."
+      "zh": "我主要研究有限算力下的大模型条件计算，关注专家路由（MaxScore）、稀疏深度路由及其缩放规律（X-MoD），以及高效多模态推理。",
+      "en": "I study conditional computation in large models under limited compute budgets. My work covers expert routing (MaxScore), sparse depth routing and scaling laws (X-MoD), and efficient multimodal inference."
     },
     {
       "zh": "我也担任 ICASSP、CVPR 和 ICLR 等学术会议的审稿人。",
