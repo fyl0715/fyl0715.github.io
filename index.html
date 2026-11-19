@@ -49,13 +49,7 @@ button { color: inherit; }
 .intro-row { grid-template-columns: minmax(0, 1fr) minmax(200px, 232px); padding-bottom: 2.5rem; }
 .background-row { grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); padding: 2rem 0 2.5rem; }
 .intro-row > *, .background-row > * { min-width: 0; }
-.portrait { display: block; width: 145px; height: 203px; object-fit: cover; border-radius: 7px; background: var(--soft); margin-bottom: 1.4rem; }
 h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -.045em; font-size: 2.45rem; line-height: 1.2; margin: 0 0 .65rem; }
-.affiliation { font-weight: 550; margin: 0; font-size: 1rem; }
-.location { color: var(--muted); margin: .1rem 0 1.4rem; font-size: .9rem; }
-.profile-links { display: flex; flex-wrap: wrap; gap: .35rem .7rem; }
-.profile-links a { display: inline-flex; align-items: center; gap: .45rem; min-height: 44px; padding: .2rem .05rem; font-size: .9rem; text-decoration: none; }
-.profile-links svg { width: 18px; height: 18px; flex-shrink: 0; }
 main { min-width: 0; }
 section { scroll-margin-top: 2rem; }
 h2 { font-size: 1.65rem; line-height: 1.3; letter-spacing: -.025em; margin: 0 0 1.2rem; font-weight: 600; }
@@ -139,14 +133,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
   .language-toggle { margin-left: .25rem; min-width: 54px; }
   .layout { display: block; padding: 2rem 1.25rem 3rem; }
   .intro-row, .background-row { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; padding-bottom: 1.75rem; }
-  .profile { display: grid; grid-template-columns: 104px minmax(0,1fr); gap: 1rem 1.25rem; }
-  .portrait { width: 104px; height: 146px; margin: 0; }
   h1 { font-size: 2rem; margin-top: .15rem; }
-  .affiliation { font-size: .9rem; }
-  .location { font-size: .8rem; margin-bottom: .5rem; }
-  .profile-links { gap: .3rem .85rem; }
-  .profile-links a { font-size: .8rem; }
-  .profile-links svg { width: 16px; height: 16px; }
   h2 { font-size: 1.5rem; }
   .section-heading { padding-top: 1.6rem; }
   .site-footer { padding: 1.25rem; }
@@ -157,9 +144,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
   .brand { font-size: .9rem; }
   .site-nav { gap: .7rem; }
   .site-nav .about-nav { display: none; }
-  .profile { column-gap: 1rem; }
   h1 { font-size: 1.85rem; }
-  .profile-links { gap: .15rem .65rem; }
   .section-heading { flex-wrap: wrap; gap: 0 .5rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -182,8 +167,8 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
 .brand { font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; }
 .layout { padding-top: clamp(2rem, 4vw, 3.5rem); }
 .intro-row {
-  grid-template-columns: minmax(0, 1fr) minmax(235px, 258px);
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(255px, 288px);
+  align-items: start;
   column-gap: clamp(2rem, 5vw, 4rem);
   row-gap: 1.65rem;
 }
@@ -191,14 +176,66 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
 .about h1 { color: #143447; font-size: clamp(2.7rem, 5vw, 4.35rem); margin-bottom: .75rem; }
 .about p { max-width: 65ch; }
 .about .about-affiliation, .about .about-detail { color: var(--muted); }
-.about .about-focus { font-size: clamp(1.08rem, 1.65vw, 1.22rem); line-height: 1.65; }
+.about .about-focus { border-inline-start: 2px solid #8eb4c3; padding-inline-start: .85rem; font-size: clamp(1.08rem, 1.65vw, 1.22rem); line-height: 1.65; }
 .about .about-detail { margin-bottom: 0; font-size: .95rem; }
-.profile { padding: 1.15rem 1.25rem; background: #f4f8f9; border: 1px solid var(--line); border-radius: .85rem; }
-.portrait { width: 112px; height: 150px; margin-bottom: .75rem; border-radius: .65rem; object-position: center 30%; }
+.profile {
+  padding: 1rem 1.15rem;
+  background: #f4f8f9;
+  border: 1px solid var(--line);
+  border-radius: .9rem;
+}
+.profile-identity {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  align-items: center;
+  gap: .85rem;
+  padding: .2rem 0 1rem;
+}
+.portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: .65rem;
+  background: var(--paper);
+}
 .profile-name { display: none; }
-.location { margin-bottom: .65rem; }
-.profile-links { gap: 0 .65rem; }
-.profile-links a { min-height: 44px; overflow-wrap: anywhere; }
+.affiliation { font-weight: 650; margin: 0; font-size: .95rem; line-height: 1.35; }
+.location { color: var(--muted); margin: .3rem 0 0; font-size: .86rem; line-height: 1.45; }
+.profile-links { display: grid; list-style: none; margin: 0; padding: .5rem 0 0; border-top: 1px solid var(--line); }
+.profile-links a {
+  display: flex;
+  align-items: center;
+  gap: .62rem;
+  min-height: 44px;
+  padding: .3rem .15rem;
+  border-radius: .4rem;
+  font-size: .9rem;
+  line-height: 1.4;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.profile-links a:hover { background: var(--soft); text-decoration: underline; }
+.profile-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: .4rem;
+  background: #e5eff2;
+}
+.profile-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .background-row { gap: clamp(2rem, 5vw, 4rem); }
 .education h2, .research h2, .section-heading h2 { font-size: clamp(1.35rem, 2.1vw, 1.65rem); }
 .news-list { list-style: none; padding: 0; margin-top: .9rem; }
@@ -221,11 +258,13 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
 @media (max-width: 720px) {
   .layout { padding-top: 1.5rem; }
   .intro-row, .publication-row:has(.pub-figure) { grid-template-columns: minmax(0, 1fr); gap: 1.05rem; }
-  .intro-row .profile { grid-row: 1; align-items: center; grid-template-columns: 82px minmax(0, 1fr); padding: .65rem .85rem; gap: .75rem; }
-  .portrait { width: 82px; height: 110px; margin: 0; }
-  .profile-links a { min-height: 44px; }
+  .intro-row .profile { grid-row: 1; padding: .85rem .95rem; }
+  .profile-identity { grid-template-columns: 72px minmax(0, 1fr); gap: .8rem; padding-bottom: .75rem; }
+  .profile-name { display: block; margin: 0 0 .2rem; font: 1.7rem/1.2 Georgia, "Times New Roman", serif; }
+  .profile-links { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); column-gap: .65rem; }
+  .profile-links a { font-size: .85rem; gap: .45rem; }
+  .profile-email { grid-column: 1 / -1; }
   .about h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-  .profile-name { display: block; margin: 0 0 .2rem; font: 1.75rem/1.2 Georgia, "Times New Roman", serif; }
   .header-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 .5rem; }
   .site-nav { grid-column: 1 / -1; grid-row: 2; flex-wrap: wrap; gap: 0 .65rem; }
   .site-nav a { white-space: nowrap; display: inline-flex; align-items: center; min-height: 44px; }
@@ -241,10 +280,8 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
 @media (max-width: 360px) {
   .site-nav { justify-content: space-between; column-gap: .3rem; }
   .site-nav a { font-size: .8rem; }
-  .intro-row .profile { grid-template-columns: 68px minmax(0, 1fr); }
-  .profile-links { gap: 0 .45rem; }
-  .profile-links svg { width: 14px; }
-  .portrait { width: 68px; height: 92px; }
+  .profile-identity { grid-template-columns: 64px minmax(0, 1fr); }
+  .profile-links { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); column-gap: .4rem; }
 }
 </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Yilong Fan", "url": "https://fyl0715.github.io/", "affiliation": {"@type": "CollegeOrUniversity", "name": "Tianjin University"}, "sameAs": ["https://scholar.google.com/citations?user=1bKyJZQAAAAJ", "https://github.com/fyl0715"], "knowsAbout": ["Efficient large models", "Reasoning & learning", "Computer vision"]}</script>
@@ -273,17 +310,34 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
 <p class="about-detail"><span data-lang="en">I also serve as a reviewer for conferences including ICASSP, CVPR, and ICLR.</span><span data-lang="zh">我也担任 ICASSP、CVPR 和 ICLR 等学术会议的审稿人。</span></p>
       </section>
       <aside class="profile" aria-label="Researcher profile">
-        <img class="portrait" src="assets/portrait.jpg" width="183" height="256" alt="Portrait of Yilong Fan" fetchpriority="high">
-        <div class="profile-info">
-          <p class="profile-name" aria-hidden="true">Yilong Fan</p>
-          <p class="affiliation"><span data-lang="en">Tianjin University</span><span data-lang="zh">天津大学</span></p>
-          <p class="location"><span data-lang="en">Tianjin, China</span><span data-lang="zh">中国 · 天津</span></p>
-          <div class="profile-links">
-            <a href="https://scholar.google.com/citations?user=1bKyJZQAAAAJ" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5-10-5Z"/><path d="M6 11v6c4 3 8 3 12 0v-6M22 9v8"/></svg>Google Scholar</a>
-            <a href="https://github.com/fyl0715" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="m9 8-4 4 4 4m6-8 4 4-4 4"/></svg>GitHub</a>
-            <a href="mailto:fanyilong@tju.edu.cn">fanyilong@tju.edu.cn</a>
+        <div class="profile-identity">
+          <img class="portrait" src="assets/portrait.jpg" width="183" height="256" alt="Portrait of Yilong Fan" fetchpriority="high">
+          <div class="profile-info">
+            <p class="profile-name" aria-hidden="true">Yilong Fan</p>
+            <p class="affiliation"><span data-lang="en">Tianjin University</span><span data-lang="zh">天津大学</span></p>
+            <p class="location"><span data-lang="en">Tianjin, China</span><span data-lang="zh">中国 · 天津</span></p>
           </div>
         </div>
+        <ul class="profile-links">
+          <li>
+            <a href="https://scholar.google.com/citations?user=1bKyJZQAAAAJ" target="_blank" rel="noopener noreferrer">
+              <span class="profile-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m2 9 10-5 10 5-10 5-10-5Z M6 11v5c3.5 2.7 8.5 2.7 12 0v-5 M22 9v6"/></svg></span>
+              <span>Google Scholar</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/fyl0715" target="_blank" rel="noopener noreferrer">
+              <span class="profile-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-2-14-4 16"/></svg></span>
+              <span>GitHub</span>
+            </a>
+          </li>
+          <li class="profile-email">
+            <a href="mailto:fanyilong@tju.edu.cn">
+              <span class="profile-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <span>fanyilong@tju.edu.cn</span>
+            </a>
+          </li>
+        </ul>
       </aside>
     </div>
     <div class="background-row">
