@@ -55,9 +55,19 @@ def figure_html(p):
     </figure>'''
 
 
-def paper_html(p, name):
+def paper_html(p, name, homepages):
     marker = set(p.get("equal_contribution_authors", []))
-    authors = ", ".join((f"<strong>{e(a)}</strong>" if a == name else e(a)) + ("<sup>*</sup>" if a in marker else "") for a in p["authors"])
+    labels = []
+    for author in p["authors"]:
+        label = e(author)
+        if author in homepages:
+            label = f'<a href="{e(homepages[author])}">{label}</a>'
+        if author == name:
+            label = f"<strong>{label}</strong>"
+        if author in marker:
+            label += "<sup>*</sup>"
+        labels.append(label)
+    authors = ", ".join(labels)
     kind = {"conference": ("Conference paper", "会议论文"), "journal": ("Journal article", "期刊论文"), "preprint": ("Preprint", "预印本")}[p["kind"]]
     venue = p.get("venue_short", p["venue"])
     if p.get("arxiv") and p["kind"] == "preprint":
@@ -103,9 +113,10 @@ def main():
     # Preserve the source ordering within each year.
     publications.sort(key=lambda p: p["year"], reverse=True)
     years = sorted({p["year"] for p in publications}, reverse=True)
+    homepages = json.loads((ROOT / "data/author-homepages.json").read_text())
     blocks = []
     for year in years:
-        papers = "\n".join(paper_html(p, profile["name"]) for p in publications if p["year"] == year)
+        papers = "\n".join(paper_html(p, profile["name"], homepages) for p in publications if p["year"] == year)
         blocks.append(f'<div class="publication-year" aria-labelledby="year-{year}"><h3 class="year-heading" id="year-{year}">{year}</h3>{papers}</div>')
     research = "".join('<li><strong>' + bilingual(r["en"], r["zh"]) + '</strong><p>' + bilingual(r["descriptionEn"], r["descriptionZh"]) + '</p></li>' for r in profile["research"])
     about = profile["about"]
