@@ -42,12 +42,14 @@ def figure_html(p):
     figure = p.get("image")
     if not figure:
         return ""
+    thumbnail = figure.get("thumbnail")
+    high_density = f' srcset="{e(figure["path"])} 2x"' if thumbnail else ""
     caption = ""
     if figure.get("kind") == "adapted":
         caption = "<figcaption>" + bilingual("Redrawn method diagram", "重绘方法图") + "</figcaption>"
     return f'''<figure class="pub-figure">
       <a class="figure-link" href="{e(figure['path'])}" target="_blank" rel="noopener noreferrer" data-figure-title="{e(p['title'])}" data-caption-en="{e(figure['caption']['en'])}" data-caption-zh="{e(figure['caption']['zh'])}">
-        <img src="{e(figure.get('thumbnail', figure['path']))}" width="{figure['width']}" height="{figure['height']}" loading="lazy" decoding="async" alt="{e(figure['alt']['en'])}" data-alt-en="{e(figure['alt']['en'])}" data-alt-zh="{e(figure['alt']['zh'])}">
+        <img src="{e(thumbnail or figure['path'])}"{high_density} width="{figure['width']}" height="{figure['height']}" loading="lazy" decoding="async" alt="{e(figure['alt']['en'])}" data-alt-en="{e(figure['alt']['en'])}" data-alt-zh="{e(figure['alt']['zh'])}">
       </a>
       {caption}
     </figure>'''

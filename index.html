@@ -69,7 +69,6 @@ h1 { margin: 0; font: 400 clamp(3.1rem, 5vw, 4.05rem)/1.08 var(--display); lette
 .portrait-plate { grid-area: photo; margin: 0; align-self: center; justify-self: center; width: clamp(8rem, 12.5vw, 10.5rem); }
 .portrait { display: block; width: 100%; height: auto; }
 .portrait-plate figcaption { margin-top: .5rem; color: var(--muted); font-size: .86rem; text-align: center; }
-.layout { padding-bottom: 3rem; }
 .site-footer { padding: 1.2rem 0 2rem; }
 .menu-close { display: none; }
 .menu-toggle[aria-expanded="true"] .menu-open { display: none; }
@@ -259,8 +258,10 @@ h1 { margin: 0; font: 400 clamp(3.1rem, 5vw, 4.05rem)/1.08 var(--display); lette
 .news-copy a:hover, .site-footer a:hover { color: var(--ink); }
 
 #publications {
+  width: min(80rem, calc(100% - clamp(2rem, 6vw, 6rem)));
+  margin-inline: auto;
   border-top: 1px solid var(--line);
-  padding-top: clamp(2.1rem, 4vw, 3.5rem);
+  padding-block: clamp(2.1rem, 4vw, 3.5rem) 3rem;
 }
 
 #publications .section-heading h2 { font-size: clamp(2rem, 3vw, 2.6rem); }
@@ -282,7 +283,7 @@ h1 { margin: 0; font: 400 clamp(3.1rem, 5vw, 4.05rem)/1.08 var(--display); lette
 .small-link:hover { color: var(--ink); background: transparent; }
 
 .publication-intro {
-  margin: .45rem 0 clamp(1.6rem, 3.5vw, 2.5rem);
+  margin: .45rem 0 clamp(1.25rem, 2.5vw, 2rem);
   color: var(--muted);
   font-size: .9375rem;
   line-height: 1.6;
@@ -297,13 +298,12 @@ h1 { margin: 0; font: 400 clamp(3.1rem, 5vw, 4.05rem)/1.08 var(--display); lette
 
 .year-heading {
   display: block;
-  margin: 0 0 .8rem;
+  margin: 0 0 .85rem;
   color: var(--ink);
-  font: 400 clamp(2rem, 3.3vw, 2.85rem)/1.05 var(--display, Georgia, "Songti SC", serif);
-  letter-spacing: -.055em;
+  font: 500 clamp(1.3rem, 1.8vw, 1.5rem)/1.2 var(--display);
+  letter-spacing: -.015em;
   font-variant-numeric: lining-nums proportional-nums;
 }
-.year-heading::after { content: none; }
 
 .publication {
   padding: clamp(1.45rem, 3vw, 2.1rem) 0;
@@ -318,9 +318,9 @@ h1 { margin: 0; font: 400 clamp(3.1rem, 5vw, 4.05rem)/1.08 var(--display); lette
 
 .publication-row:has(.pub-figure) {
   display: grid;
-  grid-template-columns: minmax(0, 30%) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 32%) minmax(0, 1fr);
   align-items: center;
-  gap: clamp(1.6rem, 3.5vw, 3.25rem);
+  gap: clamp(1.25rem, 2.4vw, 2.25rem);
 }
 
 .publication-copy { grid-row: auto; }
@@ -401,7 +401,6 @@ h1 { margin: 0; font: 400 clamp(3.1rem, 5vw, 4.05rem)/1.08 var(--display); lette
 .pub-links > a:hover, .pub-links > button:hover { color: var(--ink); }
 
 .pub-summary {
-  max-width: 70ch;
   margin: 0;
   color: var(--muted);
   font-size: 1rem;
@@ -463,18 +462,6 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
 }
 .site-footer p { margin: 0; }
 
-@media (min-width: 70rem) {
-  .publication-year {
-    display: grid;
-    grid-template-columns: minmax(5rem, .105fr) minmax(0, 1fr);
-    gap: 0 clamp(1.5rem, 3vw, 3rem);
-    align-items: start;
-    padding-top: 1.55rem;
-  }
-  .year-heading { grid-column: 1; grid-row: 1; }
-  .publication-year .publication { grid-column: 2; }
-}
-
 @media (max-width: 42rem) {
   .background-row { grid-template-columns: 1fr; gap: 1.85rem; padding-block: 1.85rem; }
   .education-list, .research-list { margin-top: .9rem; }
@@ -495,6 +482,8 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
 }
 
 @media print {
+  #publications { width: 100%; }
+  .year-heading { break-after: avoid; }
   .news, .background-row { padding-block: 1rem; }
   .small-link, .bib-button, .bib-panel, .figure-dialog { display: none !important; }
   .publication { break-inside: avoid; }
@@ -569,17 +558,18 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
 <li><time datetime="2024-07">07/2024</time> <div class="news-copy"><span aria-hidden="true">🎉</span> <span data-lang="en">1 paper was accepted to <strong>ECAI 2024</strong> (<a href="#pixel2024">PtReCl</a>).</span><span data-lang="zh"><strong>ECAI 2024</strong> 录用 1 篇论文（<a href="#pixel2024">PtReCl</a>）。</span></div></li>
 <li><time datetime="2023-12">12/2023</time> <div class="news-copy"><span aria-hidden="true">🎉</span> <span data-lang="en">1 paper was accepted to <strong>ICASSP 2024</strong> (<a href="#bdcl2024">BDCL</a>).</span><span data-lang="zh"><strong>ICASSP 2024</strong> 录用 1 篇论文（<a href="#bdcl2024">BDCL</a>）。</span></div></li></ul>
       </section>
-      <section id="publications" aria-labelledby="publications-heading">
-        <div class="section-heading">
-          <h2 id="publications-heading"><span data-lang="en">Publications</span><span data-lang="zh">出版物</span></h2>
-          <a class="small-link" href="publications.bib" download><span data-lang="en">Download BibTeX</span><span data-lang="zh">下载全部 BibTeX</span></a>
-        </div>
-        <p class="publication-intro"><span data-lang="en">1 journal article · 4 conference papers · 6 preprints</span><span data-lang="zh">1 篇期刊论文 · 4 篇会议论文 · 6 篇预印本</span></p>
-        <div id="publication-list"><div class="publication-year" aria-labelledby="year-2026"><h3 class="year-heading" id="year-2026">2026</h3><article class="publication" id="reaccess2026" data-year="2026">
+    </div>
+    <section id="publications" aria-labelledby="publications-heading">
+      <div class="section-heading">
+        <h2 id="publications-heading"><span data-lang="en">Publications</span><span data-lang="zh">出版物</span></h2>
+        <a class="small-link" href="publications.bib" download><span data-lang="en">Download BibTeX</span><span data-lang="zh">下载全部 BibTeX</span></a>
+      </div>
+      <p class="publication-intro"><span data-lang="en">1 journal article · 4 conference papers · 6 preprints</span><span data-lang="zh">1 篇期刊论文 · 4 篇会议论文 · 6 篇预印本</span></p>
+      <div id="publication-list"><div class="publication-year" aria-labelledby="year-2026"><h3 class="year-heading" id="year-2026">2026</h3><article class="publication" id="reaccess2026" data-year="2026">
       <div class="publication-row">
       <figure class="pub-figure">
       <a class="figure-link" href="assets/papers/reaccess2026.webp" target="_blank" rel="noopener noreferrer" data-figure-title="ReAccess: Look Once, Stay Focused with Efficient Test Time Memory" data-caption-en="Figure 2. ReAccess constructs visual memory during prefill and retrieves evidence during reasoning." data-caption-zh="原论文图 2。ReAccess 在预填充阶段构建视觉记忆，并在推理时检索相关证据。">
-        <img src="assets/papers/reaccess2026-thumb.webp" width="1666" height="673" loading="lazy" decoding="async" alt="ReAccess framework showing memory construction and utilization for vision-language reasoning." data-alt-en="ReAccess framework showing memory construction and utilization for vision-language reasoning." data-alt-zh="ReAccess 框架图，展示视觉语言推理中的记忆构建与利用。">
+        <img src="assets/papers/reaccess2026-thumb.webp" srcset="assets/papers/reaccess2026.webp 2x" width="1666" height="673" loading="lazy" decoding="async" alt="ReAccess framework showing memory construction and utilization for vision-language reasoning." data-alt-en="ReAccess framework showing memory construction and utilization for vision-language reasoning." data-alt-zh="ReAccess 框架图，展示视觉语言推理中的记忆构建与利用。">
       </a>
       
     </figure>
@@ -637,7 +627,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <div class="publication-row">
       <figure class="pub-figure">
       <a class="figure-link" href="assets/papers/xmod2026.webp" target="_blank" rel="noopener noreferrer" data-figure-title="X-MoD: Practical Scaling Laws for Sparse-Depth Routing Beyond Mixture-of-Depths" data-caption-en="MoD and X-MoD architecture and routing mechanisms." data-caption-zh="MoD 与 X-MoD 的结构和路由机制。">
-        <img src="assets/papers/xmod2026-thumb.webp" width="1400" height="532" loading="lazy" decoding="async" alt="MoD and X-MoD diagrams comparing layer organization and token routing within a layer." data-alt-en="MoD and X-MoD diagrams comparing layer organization and token routing within a layer." data-alt-zh="MoD 与 X-MoD 的层间结构及层内 token 路由机制对比图。">
+        <img src="assets/papers/xmod2026-thumb.webp" srcset="assets/papers/xmod2026.webp 2x" width="1400" height="532" loading="lazy" decoding="async" alt="MoD and X-MoD diagrams comparing layer organization and token routing within a layer." data-alt-en="MoD and X-MoD diagrams comparing layer organization and token routing within a layer." data-alt-zh="MoD 与 X-MoD 的层间结构及层内 token 路由机制对比图。">
       </a>
       
     </figure>
@@ -666,7 +656,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <div class="publication-row">
       <figure class="pub-figure">
       <a class="figure-link" href="assets/papers/coupling2026.webp" target="_blank" rel="noopener noreferrer" data-figure-title="The Coupling Tax: How Shared Token Budgets Undermine Visible Chain-of-Thought Under Fixed Output Limits" data-caption-en="Accuracy under matched token budgets and actual token usage." data-caption-zh="相同 token 预算及实际 token 用量下的准确率对比。">
-        <img src="assets/papers/coupling2026-thumb.webp" width="1400" height="658" loading="lazy" decoding="async" alt="Two plots compare thinking and non-thinking accuracy against token budget and actual token use." data-alt-en="Two plots compare thinking and non-thinking accuracy against token budget and actual token use." data-alt-zh="两幅曲线图比较思考与非思考模式的准确率随 token 预算和实际用量的变化。">
+        <img src="assets/papers/coupling2026-thumb.webp" srcset="assets/papers/coupling2026.webp 2x" width="1400" height="658" loading="lazy" decoding="async" alt="Two plots compare thinking and non-thinking accuracy against token budget and actual token use." data-alt-en="Two plots compare thinking and non-thinking accuracy against token budget and actual token use." data-alt-zh="两幅曲线图比较思考与非思考模式的准确率随 token 预算和实际用量的变化。">
       </a>
       
     </figure>
@@ -782,7 +772,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <div class="publication-row">
       <figure class="pub-figure">
       <a class="figure-link" href="assets/papers/ultrasound2025.webp" target="_blank" rel="noopener noreferrer" data-figure-title="Ultrasound image segmentation of thyroid nodule via latent semantic feature co-registration" data-caption-en="Original paper, Fig. 3 · Semantic extraction and deformation fusion" data-caption-zh="论文原图，图3 · 语义提取与形变融合">
-        <img src="assets/papers/ultrasound2025-thumb.webp" width="2400" height="712" loading="lazy" decoding="async" alt="Thyroid ultrasound segmentation framework combining atlas and target semantic features, Half-STN registration, spatially transformed atlas labels, and weighted label fusion." data-alt-en="Thyroid ultrasound segmentation framework combining atlas and target semantic features, Half-STN registration, spatially transformed atlas labels, and weighted label fusion." data-alt-zh="甲状腺超声分割框架：图谱与目标图像的语义特征、Half-STN配准、图谱标签空间变换及加权标签融合。">
+        <img src="assets/papers/ultrasound2025-thumb.webp" srcset="assets/papers/ultrasound2025.webp 2x" width="2400" height="712" loading="lazy" decoding="async" alt="Thyroid ultrasound segmentation framework combining atlas and target semantic features, Half-STN registration, spatially transformed atlas labels, and weighted label fusion." data-alt-en="Thyroid ultrasound segmentation framework combining atlas and target semantic features, Half-STN registration, spatially transformed atlas labels, and weighted label fusion." data-alt-zh="甲状腺超声分割框架：图谱与目标图像的语义特征、Half-STN配准、图谱标签空间变换及加权标签融合。">
       </a>
       
     </figure>
@@ -812,7 +802,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <div class="publication-row">
       <figure class="pub-figure">
       <a class="figure-link" href="assets/papers/mambadfan2025.webp" target="_blank" rel="noopener noreferrer" data-figure-title="Mamba-Dfan: Mamba-Driven Dual-Branch Frequency-Domain Network for Rgb-D and Rgb-T Salient Object Detection" data-caption-en="Figure 1. Mamba-DFAN architecture with dual-band frequency modeling and cross-modal feature fusion." data-caption-zh="原论文图 1。Mamba-DFAN 整体架构，展示双频段建模与跨模态特征融合。">
-        <img src="assets/papers/mambadfan2025-thumb.webp" width="1600" height="757" loading="lazy" decoding="async" alt="Mamba-DFAN architecture with dual-band frequency modeling and cross-modal feature fusion." data-alt-en="Mamba-DFAN architecture with dual-band frequency modeling and cross-modal feature fusion." data-alt-zh="Mamba-DFAN 整体架构，展示双频段建模与跨模态特征融合。">
+        <img src="assets/papers/mambadfan2025-thumb.webp" srcset="assets/papers/mambadfan2025.webp 2x" width="1600" height="757" loading="lazy" decoding="async" alt="Mamba-DFAN architecture with dual-band frequency modeling and cross-modal feature fusion." data-alt-en="Mamba-DFAN architecture with dual-band frequency modeling and cross-modal feature fusion." data-alt-zh="Mamba-DFAN 整体架构，展示双频段建模与跨模态特征融合。">
       </a>
       
     </figure>
@@ -840,7 +830,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <div class="publication-row">
       <figure class="pub-figure">
       <a class="figure-link" href="assets/papers/pixel2024.webp" target="_blank" rel="noopener noreferrer" data-figure-title="Pixel-wise Reclassification with Prototypes for Enhancing Weakly Supervised Semantic Segmentation" data-caption-en="Figure 3. PtReCl architecture showing pseudo-mask restoration, prototype acquisition, pixel reclassification, and mask refinement." data-caption-zh="原论文图 3。PtReCl 架构，包含伪掩码恢复、原型获取、像素重分类和掩码再细化。">
-        <img src="assets/papers/pixel2024-thumb.webp" width="1574" height="981" loading="lazy" decoding="async" alt="PtReCl architecture showing pseudo-mask restoration, prototype acquisition, pixel reclassification, and mask refinement." data-alt-en="PtReCl architecture showing pseudo-mask restoration, prototype acquisition, pixel reclassification, and mask refinement." data-alt-zh="PtReCl 架构，包含伪掩码恢复、原型获取、像素重分类和掩码再细化。">
+        <img src="assets/papers/pixel2024-thumb.webp" srcset="assets/papers/pixel2024.webp 2x" width="1574" height="981" loading="lazy" decoding="async" alt="PtReCl architecture showing pseudo-mask restoration, prototype acquisition, pixel reclassification, and mask refinement." data-alt-en="PtReCl architecture showing pseudo-mask restoration, prototype acquisition, pixel reclassification, and mask refinement." data-alt-zh="PtReCl 架构，包含伪掩码恢复、原型获取、像素重分类和掩码再细化。">
       </a>
       
     </figure>
@@ -869,7 +859,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
       <div class="publication-row">
       <figure class="pub-figure">
       <a class="figure-link" href="assets/papers/bdcl2024-method.webp" target="_blank" rel="noopener noreferrer" data-figure-title="Balanced And Discriminative Contrastive Learning For Class-Imbalanced Medical Images" data-caption-en="BDCL training framework, redrawn in English from the author-provided Chinese diagram." data-caption-zh="BDCL 训练框架，根据作者提供的中文图重绘为英文版。">
-        <img src="assets/papers/bdcl2024-method-thumb.webp" width="1774" height="887" loading="lazy" decoding="async" alt="BDCL architecture with shared encoders, representation learning, classifier learning, and an epoch-dependent loss weight." data-alt-en="BDCL architecture with shared encoders, representation learning, classifier learning, and an epoch-dependent loss weight." data-alt-zh="BDCL 双分支架构，展示共享编码器、表征学习、分类器学习及随训练轮次变化的损失权重。">
+        <img src="assets/papers/bdcl2024-method-thumb.webp" srcset="assets/papers/bdcl2024-method.webp 2x" width="1774" height="887" loading="lazy" decoding="async" alt="BDCL architecture with shared encoders, representation learning, classifier learning, and an epoch-dependent loss weight." data-alt-en="BDCL architecture with shared encoders, representation learning, classifier learning, and an epoch-dependent loss weight." data-alt-zh="BDCL 双分支架构，展示共享编码器、表征学习、分类器学习及随训练轮次变化的损失权重。">
       </a>
       <figcaption><span data-lang="en">Redrawn method diagram</span><span data-lang="zh">重绘方法图</span></figcaption>
     </figure>
@@ -894,8 +884,7 @@ body:has(.figure-dialog[open]) { overflow: hidden; }
 }</pre>
       </div>
     </article></div></div>
-      </section>
-    </div>
+    </section>
   </main>
   <footer class="site-footer">
     <p>© 2026 Yilong Fan</p>
