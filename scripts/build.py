@@ -153,10 +153,7 @@ def main():
     intro_en = f'{counts["journal"]} journal article · {counts["conference"]} conference papers · {counts["preprint"]} preprints'
     intro_zh = f'{counts["journal"]} 篇期刊论文 · {counts["conference"]} 篇会议论文 · {counts["preprint"]} 篇预印本'
     schema = {"@context": "https://schema.org", "@type": "Person", "name": profile["name"], "url": profile["siteUrl"], "affiliation": {"@type": "CollegeOrUniversity", "name": profile["affiliation"]["en"]}, "sameAs": [profile["scholar"], profile["github"]], "knowsAbout": [r["en"] for r in profile["research"]]}
-    given, space, family = profile["name"].rpartition(" ")
-    display_name = f'{e(given)}{space}<em>{e(family)}</em>' if space else e(family)
     fields = {
-        "DISPLAY_NAME": display_name,
         "NAME": e(profile["name"]), "DESCRIPTION": e(profile["name"] + " at " + profile["affiliation"]["en"] + ". Research in deep learning, computer vision and large language models. Publications and research interests."),
         "EMAIL": e(profile["email"]),
         "AFFILIATION": bilingual(**profile["affiliation"]), "LOCATION": bilingual(**profile["location"]),

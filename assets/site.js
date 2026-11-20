@@ -89,44 +89,6 @@
     if (event.relatedTarget && !sectionsButton.contains(event.relatedTarget) && !sectionLinks.contains(event.relatedTarget)) closeSections();
   });
 
-  // A static family of contours behind the portrait, scaled in the canvas's own space.
-  const canvas = document.querySelector('.contours');
-  const context = canvas.getContext('2d');
-  function drawContours() {
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
-    if (!width || !height || !context) return;
-    const scale = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = Math.round(width * scale);
-    canvas.height = Math.round(height * scale);
-    context.scale(scale, scale);
-    const wash = context.createLinearGradient(0, height, width, 0);
-    wash.addColorStop(0, 'rgba(167, 192, 179, 0)');
-    wash.addColorStop(.38, 'rgba(167, 192, 179, .37)');
-    wash.addColorStop(.78, 'rgba(224, 179, 143, .56)');
-    wash.addColorStop(1, 'rgba(224, 179, 143, .23)');
-    context.strokeStyle = wash;
-    context.lineWidth = .78;
-    for (let line = 0; line < 45; line++) {
-      const t = line / 44;
-      context.beginPath();
-      context.moveTo(width * (-.17 + .55 * t), height * 1.1);
-      context.bezierCurveTo(
-        width * (.13 + .25 * t), height * (.97 - .08 * t),
-        width * (.18 + .26 * t), height * (-.34 + .78 * t),
-        width * (.56 + .13 * t), height * (.26 + .41 * t)
-      );
-      context.bezierCurveTo(
-        width * (.83 + .02 * t), height * (.64 + .33 * t),
-        width * (.84 - .20 * t), height * (.13 + .43 * t),
-        width * 1.1, height * (-.14 + .56 * t)
-      );
-      context.stroke();
-    }
-  }
-  drawContours();
-  if (window.ResizeObserver) new ResizeObserver(drawContours).observe(canvas);
-  else window.addEventListener('resize', drawContours);
   let preference = 'en';
   try { if (localStorage.getItem('academic-language') === 'zh-CN') preference = 'zh-CN'; } catch { /* Use English by default. */ }
   document.querySelectorAll('[data-enhanced]').forEach(el => { el.hidden = false; });
